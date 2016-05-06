@@ -6,18 +6,20 @@
 %The formatting corresponds to "The Old Dominion University Guide to the Preparation of These and Dissertation"
 %as updated in August 2010.
 %
+% Updated 3/24/2016 to match new format for electronic submission
+%
 \setlength{\voffset}{-0.5in}
 \marginparwidth 40pt \marginparsep 10pt
 \topmargin 0in \headsep .31in
-\textheight 8.94in \textwidth 5.96in
+\textheight 8.94in \textwidth 6.5in
 \brokenpenalty=10000
 
 
-\oddsidemargin 0.50in
+\oddsidemargin 0.00in
 \if@twoside
   \evensidemargin 0.0in
 \else
-  \evensidemargin 0.50in
+  \evensidemargin 0.0in
 \fi
 
 \textfloatsep  40pt plus 2pt minus 4pt
@@ -118,7 +120,6 @@
 %FRW  fix for 2e over 2.09
 %
 \def\signline#1{\\
-                \rule{2.5in}{0.5pt}\\
                  {\small #1} \\}
 
 
@@ -227,21 +228,24 @@
 
         \cleardoublepage
         \iftablespage
-                {\addvspace{10pt}
+                {\addcontentsline{toc}{chapter}{\uppercase{List of Tables}}
+                \addvspace{10pt}
                 \let\saveaddvspace=\addvspace
                 \def\addvspace##1{}
                 \listoftables
                 \let\addvspace=\saveaddvspace
-                \addcontentsline{toc}{chapter}{\uppercase{List of Tables}}
+
                 \let\addvspace=\saveaddvspace}
                 \cleardoublepage
         \fi
         \iffigurespage
-                {\addvspace{10pt}
+                {\addcontentsline{toc}{chapter}{\uppercase{List of Figures}}
+                 \addvspace{10pt}
                 \let\saveaddvspace=\addvspace
                 \def\addvspace##1{}
                 \listoffigures
-                \addcontentsline{toc}{chapter}{\uppercase{List of Figures}}
+                 \let\addvspace=\saveaddvspace
+
                 \let\addvspace=\saveaddvspace}
                 \cleardoublepage
         \fi
@@ -256,9 +260,9 @@
 
 \def\listoffigures{\chapter*{List of Figures}
  %\newline
- {\setlength{\parskip}{12\p@}
-  \@starttoc{lof}}
+ {\setlength{\parskip}{12\p@} \@starttoc{lof}}
  \addtocontents{lof}{\noindent Figure\hfill Page\par}}
+
 
 \renewcommand*\l@figure{\@dottedtocline{1}{0em}{2.3em}}
 
@@ -394,6 +398,48 @@
    \vskip 12\p@
   }
 
+\newcommand{\achapter}{\if@openright\cleardoublepage\else\clearpage\fi
+%                   \thispagestyle{myheadings}%
+                    \global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@achapter\@schapter}
+\def\@achapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
+                         \refstepcounter{chapter}%
+                         \typeout{\@chapapp\space\thechapter}%
+                         \addcontentsline{toc}{section}%
+                                   {\protect\numberline{\thechapter.}\uppercase{#1}}%
+                    \else
+                      \addcontentsline{toc}{section}{\uppercase{#1}}%
+                    \fi
+                    %\chaptermark{#1}%
+                    %\addtocontents{lof}{\protect\addvspace{10\p@}}%
+                    %\addtocontents{lot}{\protect\addvspace{10\p@}}%
+                    \if@twocolumn
+                      \@topnewpage[\@makeachapterhead{#2}]%
+                    \else
+                      \@makeachapterhead{#2}%
+                      \@afterheading
+                    \fi}
+\def\@makeachapterhead#1{%
+%  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \renewcommand{\baselinestretch}{2}
+    \ifnum \c@secnumdepth >\m@ne
+%        \centerline{\large\bfseries \@chapapp\space \thechapter}
+        \begin{center}
+        \large\bfseries \@chapapp\space \thechapter
+        \end{center}
+        \par\nobreak
+        \vskip 12\p@
+    \fi
+    \interlinepenalty\@M
+ %    \centerline{\large \bfseries \uppercase{#1}}\par\nobreak
+    \begin{center}
+    \large \bfseries \uppercase{#1}
+    \end{center}
+    \vskip 18\p@
+  }}
+
 
 \newcommand{\labelchaptersintableofcontents}{%
      \addtocontents{toc}{\vspace*{12pt}}
@@ -408,7 +454,8 @@
   \setcounter{section}{0}%
   \labelappendicesintableofcontents%
   \gdef\@chapapp{\appendixname}%
-  \gdef\thechapter{\@Alph\c@chapter}}
+  \gdef\thechapter{\@Alph\c@chapter}
+  }
 \renewcommand*\l@chapter[2]{%
   \ifnum \c@tocdepth >\m@ne
     \addpenalty{-\@highpenalty}%
