@@ -32,8 +32,8 @@
 
 \author{S. Lee Allison}
 \principaladviser{Dr. Charles Hyde}
-\member{member 1}  %This command produces a signature line for the specified member on the
-\member{member 2}  %title page. Use on instance of this command for each member of the
+\member{Dr. Grzegorz Kalicy}  %This command produces a signature line for the specified member on the
+\member{member}  %title page. Use on instance of this command for each member of the
                    %committee other than the advisor up to a total of 5 members.
 
 \degrees{MS in Physics}
@@ -69,37 +69,17 @@
     %The text of the thesis/dissertation begins here. The basic organization is
     %in chapters, sections, subsections. 
 
-\chapter{Introduction}
-\section{The Electron-Ion Collider}
-
-
-\chapter{DIRC Technology}
-\section{Applying the Cherenkov Effect to Particle ID}
-\section{DIRC Detectors}
-
-
-\chapter{High-Performance DIRC@EIC}
-\section{Evolution of the DIRC@EIC Design}
-\section{Current High-Performance DIRC Design}
-\section{Simulated Performance}
-\section{Potential Optimizations}
-
-
-\chapter{Test Bench Evaluation of DIRC@EIC Components}
-\section{Optical Properties of 3-Layer Lens}
-\section{Radiation Hardness of NLaK33 Material}
-\section{Performance of Photosensors in High Magnetic Field}
-
-
-\chapter{3-Layer Lens Performance in Particle Beam}
-\section{Prototype Setup}
-\section{Simulated Performance}
-\section{Data Analysis}
-\subsection{Error Evaluation}
-
-\chapter{Conclusions}
-
-\chapter{Summary}
+%\include{intro_chapter} % intro, eic, etc
+%
+\include{dirc_chapter} % explination of DIRC technology
+%
+%\include{eicdirc_chapter} % specifications of high-performance DIRC@EIC
+%
+%\include{components_chapter} % testing lens focal plane and rad hardness, and MCP-PMTs
+%
+%\include{testbeam_analysis_chapter} % analysis results from CERN 2015 test beam
+%
+%\include{summary_chapter} % outlook of future work and summary of results
 
   %This begins the list of reference or bibliography. The default form is consistent
   %with the references in the Physical Review. The articles must be listed in the order
@@ -114,8 +94,10 @@
 \addcontentsline{toc}{chapter}{BIBLIOGRAPHY}  %This command adds and entry for the
                                               %bibliography in the table of contents
 
-\bibitem{brownjackson-ref}  G.~E.~Brown and A.~D.~Jackson, {\it The
-Nucleon--Nucleon Interaction} (North--Holland, Amsterdam, 1976).
+\bibitem{bib:eicwhite}  A. ~Accardi et al, {\it Electron Ion Collider: The Next QCD Frontier - Understanding the glue that binds us all} (arXiv:1212.1701v3 [nucl-ex]).
+
+\bibitem{bib:cherenkov} B. ~M. ~Bolotovskii, {\it Vavilov-Cherenkov radiation: its discovery and application}. Physics-Uspekhi 52 (11): 1099.
+
 
 \end{thebibliography}
 
@@ -123,7 +105,7 @@ Nucleon--Nucleon Interaction} (North--Holland, Amsterdam, 1976).
 
 \appendix
 
-\chapter{}
+\achapter{Error Evaluation}
 
 
 
