@@ -238,6 +238,7 @@
                 \let\addvspace=\saveaddvspace}
                 \cleardoublepage
         \fi
+        
         \iffigurespage
                 {\addcontentsline{toc}{chapter}{\uppercase{List of Figures}}
                  \addvspace{10pt}
@@ -247,12 +248,16 @@
                  \let\addvspace=\saveaddvspace
 
                 \let\addvspace=\saveaddvspace}
-                \cleardoublepage
+                
+                	\cleardoublepage
+                
         \fi
+        
         \def\baselinestretch{1.3}\@normalsize
         \pagenumbering{arabic}
         \pagestyle{myheadings}
-        \labelchaptersintableofcontents}
+        	\labelchaptersintableofcontents
+        	}
 
 \def\tableofcontents{\pagestyle{myheadings}\chapter*{Table of Contents}
  \@starttoc{toc}

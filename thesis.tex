@@ -1,0 +1,133 @@
+\tolerance=10000
+
+\documentclass[12pt]{report}
+
+%This package is built on the LaTeX2e report class, so any other packages which are
+%also compatible with it can also be used in combination with it.  ODUthesis should
+%be in the directory in which you are working, or in one of the standard input directories
+%for the TeX installation on your system.
+
+\usepackage{ODUthesis}
+\usepackage{graphicx}
+
+%Use this package and option to label equations, e.g. chapter 1 equation 2 is labeled as (1.2)
+
+\usepackage{amsmath}
+\numberwithin{equation}{chapter}
+
+%Use this package to label figures and tables similarly to chapters above
+
+\usepackage[figurewithin=chapter]{caption}
+
+%This allows the use of scalable vector graphics (svg)
+%Must use \includesvg{} 
+%\usepackage{svg}
+
+%This package causes the first line of a section to be indented as required by the dissertation guide.
+
+\usepackage{indentfirst}
+
+%%%%%Other LaTeX2e packages such as the AMS fonts and graphics packages can be included here.
+
+%This style follows conventions used in Physical Review C. The names of figures, tables and captions can
+%be changed by using the commands below with appropriate changes. For example, "FIG." could be replaced by
+%"Fig." or "Figure" to change the labeling of figure captions.
+
+%\renewcommand{\figurename}{FIG.}
+%\renewcommand{\tablename}{TABLE}
+%\renewcommand{\bibname}{BIBLIOGRAPHY}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% My Custom Commands %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\thetaC}{\theta_{C}} % shortcut for cherenkov angle
+\newcommand{\diff}{\mathrm{d}}
+
+\begin{document}
+
+\title{R\&D of a High-Performance DIRC Detector for use in an Electron-Ion Collider}
+
+\author{S. Lee Allison}
+\principaladviser{Dr. Charles Hyde}
+\member{Dr. Grzegorz Kalicy}  %This command produces a signature line for the specified member on the
+\member{member}  %title page. Use on instance of this command for each member of the
+                   %committee other than the advisor up to a total of 5 members.
+
+\degrees{MS in Physics}
+
+\dept{Physics}          %for example \dept{physics}
+
+\submitdate{May 2017}
+
+%\phdfalse          %produces language on title page for Masters Thesis. 
+                    %otherwise the default is for a Ph.D. dissertation.
+
+%\copyrightfalse    %suppresses copyright notice
+
+%\figurespagefalse  %suppresses List of Figures
+
+%\tablespagefalse   %suppresses List of Tables
+
+\vita{The text of the Vita goes here.}
+
+
+\abstract{text of abstract goes here}
+
+\beforepreface
+
+\prefacesection{Acknowledgements}
+
+    %text of Acknowledgements goes here, any other preface section is inserted similarly by the command \prefacesection{Section Title}
+
+\afterpreface
+
+    %The text of the thesis/dissertation begins here. The basic organization is in chapters, sections, subsections. 
+
+\chapter{Introduction}
+%\input{chapters/introduction} % intro, eic, etc
+%
+\chapter{Electron-Ion Collider}
+%\input{chapters/eic} % description of EIC and why it's needed
+%
+\chapter{DIRC Technology}
+\input{chapters/dirc2} % explination of DIRC technology
+%
+\chapter{High-Performance DIRC@EIC}
+%\input{chapters/eicdirc} % specifications of high-performance DIRC@EIC
+%
+\chapter{Test Bench Evaluation of DIRC@EIC Components}
+%\input{chapters/components} % testing lens focal plane and rad hardness, and MCP-PMTs
+%
+\chapter{3-Layer Lens Performance in Particle Beam}
+%\input{chapters/analysis} % analysis results from CERN 2015 test beam
+%
+\chapter{Outlook and Summary}
+%\input{chapters/summary} % outlook of future work and summary of results
+
+  %This begins the list of reference or bibliography.
+  %The default form is consistent with the references in the Physical Review.
+  %The articles must be listed in the order in which they appear in the text.
+  %The style of the bibliography can be changed and automatic ordering of the entries can be accomplished using BibTeX.
+  %Use of BibTeX is explained in most of the standard LaTeX books.
+
+\addcontentsline{toc}{chapter}{BIBLIOGRAPHY}  %This command adds and entry for the bibliography in the table of contents
+
+\bibliography{bibliography}{}
+\bibliographystyle{unsrt}
+
+%A new command for appendix chapters has been defined called \achapter that has been modified
+%so that it can add the appendices to the table of contents in the approved form.
+
+\appendix
+
+\achapter{Error Evaluation}
+
+\newpage
+
+%The command below initiates printing of the vita page. The name and other information is taken from previous entries.
+
+\vitapage
+
+
+\end{document}
