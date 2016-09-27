@@ -1,0 +1,90 @@
+%-------------------------------------------------------------------------------
+%	EIC CHAPTER
+%-------------------------------------------------------------------------------
+\label{ch:eic}
+It has been known for nearly a century that atoms are composed of nucleons (protons and neutrons), but it took another 50 years for Murray Gell-Mann and George Zweig to independently develop a model proposing that nucleons themselves are made up of constituent components, called quarks, bound together by the exchange of gluons \cite{SLACquark}. This lead to the development of the fundamental theory of the strong interaction, known as Quantum Chromo-Dynamics (QCD). It is now a strong goal of the nuclear physics community to understand the interactions of quarks and gluons and how those interactions make manifest both nucleons themselves, which account for nearly all the mass of the visible matter in the universe, as well as the nucleons' spin, mass, magnetic moment, and nuclear binding energy. Because of the well-known properties of the electromagnetic interaction, electron scattering is an ideal process for such studies. 
+
+Although it would theoretically be possible to study these properties using fixed-target electron beam experiments, it is three-fold prohibitive: it is much more costly to construct an accelerator to accelerate electrons to the necessary momentum (on the order of TeV) than to build a collider, it is more difficult and complicated to do transverse nucleon polarization studies with a fixed target due to the nature of the required magnetic fields, and it is very difficult to study the target fragments of a fixed target reactions due to final state interactions whereas in a collider the fragments will be boosted in the same direction as the ion beam. It was therefore deemed a priority by the 2007 Nuclear Science Advisory Committee's Long-Range Plan that an Electron-Ion Collider (EIC) be the next facility to be built in the United States \cite{NSAC2007}.
+
+The EIC will not be the first facility to have the capability of colliding electrons and positrons with protons. The HERA accelerator in Hamburg, Germany was the world's first electron-proton collider, reaching electron energies of up to 28 GeV and protons to nearly 1 TeV with a luminosity on the order of $10^{31}\unit{cm}^{-2}\unit{s}^{-1}$ before shutting down in 2007. Figure \ref{fig:HERA_pdf} shows the combined H1 and Zeus experimental data from HERA for the measurement of the structure function for positron-proton scattering along with fixed target data for a wide range of both $x$ and $Q^2$. The EIC hopes to improve upon the already rich science produced at HERA threefold: by increasing the luminosity of the accelerator to on the order of $10^{34}\unit{cm}^{-2}\unit{s}^{-1}$, by allowing for the use of heavier ion beams such as oxygen, and by allowing for both transversely and longitudinally polarized beams of electrons and light ions. With these improvements the EIC will be able to look into hadronic final states with much greater detail.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.7]{HERA_PDF.pdf}
+	\caption{The reduced cross section $\sigma_{r}(x,Q^2)$ as a function of $Q^2$. Filled circles are combined H1 and Zeus data from HERA for proton-positron collisions, hollow squares are from fixed target experiments, and the yellow is prediction from HERAPDF0.1 (?)}
+	\label{fig:HERA_pdf2}
+\end{figure}
+
+%-------------------------------------------------------------------------------
+%	SCIENCE GOALS SECTION
+%-------------------------------------------------------------------------------
+\section{Science Goals}
+The goal of an EIC will be to find out how QCD is responsible for the structure and dynamics of nucleons, the nature of the nucleon-nucleon force, and the relative importance of the valance quarks.
+
+\subsection{Nucleon Spin}
+One major question still pestering nuclear physicists is ``What is the origin of the nucleon spin?''. In the 1980s the naive answer was that the total nucleon spin was the sum of the spin of its three valance quarks, but many years of experimentation has revealed that it is much more complicated (Fig. \ref{fig:nucleon_spin}), with the contributions from gluons and orbital angular momentum still in question. The EIC will be capable of much more detailed study of the contributions to the nucleon structure by enabling multi-dimensional projections of the distribution of quarks and gluons in space, longitudinal and transverse momenta, spin, and flavor.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=.08]{nucleon_spin.png}
+	\caption{Evolution of our understanding of nucleon spin structure. \textbf{Left:} In the 1980s, a nucleon’s spin was naively explained by the alignment of the spins of its constituent quarks. \textbf{Right:} In the current picture, valence quarks, sea quarks and gluons, and their possible orbital motion are expected to contribute to overall nucleon spin.}
+	\label{fig:nucleon_spin}
+\end{figure}
+
+\subsection{The EMC Effect}
+It was first observed by the European Muon Collaboration (EMC), and confirmed by other experiments \comment{grab some papers from EMC collaboration and JLAB for references} that there is a modification between the nucleon structure function, $F_2$, of deuterium to those of heavier elements as a function of Bjorken $x$. Figure \ref{fig:emc_effect} shows the ratio of structure functions of Carbon and Deuterium for $x$ between $0.2$ and $0.9$. Initial assumptions were that this ratio of structure functions would be unity, but measurements have clearly shown a suppression in this ratio for $x$ values between $0.3$ and $0.8$.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.85]{emc_effect.png}
+	\caption{Ratio of the nucleon structure functions for Carbon and Deuterium for $x$ between $0.2$ and $0.9$ and a range of $Q^2$ values.}
+	\label{fig:emc_effect}
+\end{figure}
+
+The reason for this modification to the nuclear structure function is still a mystery, but the EIC hopes to shed light on this phenomenon by studying various coherent exclusive reactions, such as $J/\Psi$ production, which could allow for the quantification of initial conditions in heavy-ion collisons by mapping out the geometry of the nucleus in high-energy processes. This mapping can also help to understand other collective dynamics, such as shadowing and anti-shadowing.
+
+\subsection{Gluon Distributions Inside Nuclei}
+As mentioned above, the EMC effect, the modification of the distribution of quarks in a nucleus versus their distribution in nucleons, is a known (yet still mysterious) phenomenon. It is still unknown whether the same holds true for gluons. The EIC hopes to measure this suppresion of the structure functions thanks to its wider range of kinematics both in $x$ and $Q^2$, being able to reach much lower $x$ values and approach the region of gluon saturation. 
+
+%-------------------------------------------------------------------------------
+%	FACILITIES SECTION
+%-------------------------------------------------------------------------------
+\section{Facilities}
+As of the writing of this thesis there are two competing designs for an EIC facility to be built in the United States: a figure-8 accelerator design for Thomas Jefferson National Accelerator Facility (JLab) (Figure \ref{fig:jleic_layout}), and a ring-ring accelerator design for Brookhaven National Lab (BNL) (Figure \ref{fig:erhic_layout}).
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{JLEIC_layout2.pdf}
+	\caption{Current design of the EIC facility for JLab with the two interaction points highlighted in red.}
+	\label{fig:jleic_layout}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.12]{eRHIC_Layout.jpeg}
+	\caption{Current design of the EIC facility for BNL.}
+	\label{fig:erhic_layout}
+\end{figure}
+
+The JLab EIC (JLEIC) is planned to be approximately 1.4 km in circumference and have a footprint of roughly 500 m by 170 m. The design is a ring-ring with electrons and ions being stored in separate beam lines and collided at two interaction points  (IPs) (outlined in red in Figure \ref{fig:jleic_layout}) on the figure-8. The JLab CEBAF SRF linac will be used as an electron injector for electrons with 3 - 11 GeV energy. The second ring will store an ion beam with energy of 20 to 100 GeV for protons or up to 40 GeV per nucleon for light to heavy ions. The ion beams are generated and accelerated in a new ion injector complex with the same figure-8 design that will be utilized to preserve ion polarization. The two rings will be stacked vertically in the same underground tunnel \cite{JLEICdesign}.
+
+The BNL facility, named eRHIC, will use a new electron beam facility based on an Energy Recovery LINAC that will be built inside of the Relativistic Heavy Ion Collider (RHIC) tunnel to collide with RHIC's pre-existing polarized proton/ion beam (Fig. \ref{fig:erhic_layout}). \comment{I feel like I should say more about eRHIC here since I said so much about JLEIC}
+
+%-------------------------------------------------------------------------------
+%	JLEIC DETECTOR SECTION
+%-------------------------------------------------------------------------------
+\subsection{JLEIC Detector Design}
+The large center of mass energies and diverse physics program at an EIC necessitate a very sophisticated detector system. Figure \ref{fig:jleic_detector} shows the current design of the JLab EIC detector at IP1. This 
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=1]{JLEIC_detector.pdf}
+	\caption{Current design of the detector to be used in the JLab EIC at IP1}
+	\label{fig:jleic_detector}
+\end{figure}
+
+%-------------------------------------------------------------------------------
+%	PARTICLE ID SUBSECTION
+%-------------------------------------------------------------------------------
+\subsection{Particle Identification}
+The ability to accurately identify hadrons in the final state is a key requirement for the physics program at an EIC.

@@ -42,7 +42,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\thetaC}{\theta_{C}} % shortcut for cherenkov angle
-\newcommand{\diff}{\mathrm{d}}
+\newcommand{\diff}{\mathrm{d}} % differential d for math
+\newcommand{\unit}[1]{\text{ #1}}
+%\newcommand{\quote}[1]{``#1''}
+
+% Define paths to figures and plots
+\graphicspath{{./figures/}{./plots/}}
+
+% Set of commands to allow commenting in bold red
+% and listing all comments with page number
+% before introductory chapter
+\usepackage{tocloft}
+\newcommand{\listcomments}{Comments}
+\newlistof{comments}{comm}{\listcomments}
+\newcommand{\comment}[1]{%
+	\refstepcounter{comments}%
+	\textbf{\large \pdfliteral{1 0 0 rg} #1 \pdfliteral{0 0 0 rg}}%
+	\addcontentsline{comm}{comments}{{\large \pdfliteral{1 0 0 rg} #1 \pdfliteral{0 0 0 rg}}}
+} % add big colored comment to text so it's easily identified later
 
 \begin{document}
 
@@ -82,28 +99,30 @@
 
 \afterpreface
 
+\listofcomments
+
     %The text of the thesis/dissertation begins here. The basic organization is in chapters, sections, subsections. 
 
 \chapter{Introduction}
-%\input{chapters/introduction} % intro, eic, etc
+\input{chapters/introduction} % intro, eic, etc
 %
 \chapter{Electron-Ion Collider}
-%\input{chapters/eic} % description of EIC and why it's needed
+\input{chapters/eic} % description of EIC and why it's needed
 %
 \chapter{DIRC Technology}
 \input{chapters/dirc2} % explination of DIRC technology
 %
 \chapter{High-Performance DIRC@EIC}
-%\input{chapters/eicdirc} % specifications of high-performance DIRC@EIC
+\input{chapters/eicdirc} % specifications of high-performance DIRC@EIC
 %
 \chapter{Test Bench Evaluation of DIRC@EIC Components}
-%\input{chapters/components} % testing lens focal plane and rad hardness, and MCP-PMTs
+\input{chapters/components} % testing lens focal plane and rad hardness, and MCP-PMTs
 %
 \chapter{3-Layer Lens Performance in Particle Beam}
-%\input{chapters/analysis} % analysis results from CERN 2015 test beam
+\input{chapters/analysis} % analysis results from CERN 2015 test beam
 %
 \chapter{Outlook and Summary}
-%\input{chapters/summary} % outlook of future work and summary of results
+\input{chapters/summary} % outlook of future work and summary of results
 
   %This begins the list of reference or bibliography.
   %The default form is consistent with the references in the Physical Review.
