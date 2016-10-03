@@ -2,7 +2,7 @@
 %	DIRC TECHNOLOGY CHAPTER
 %-------------------------------------------------------------------------------
 \label{ch:dirc}
-The DIRC detector is based on the concept of the Detection of Internally Reflected Cherenkov light (DIRC) produced in a solid radiator bar to identify charged particle. It is a special type of Cherenkov counter, which uses the unique properties of Cherenkov radiation.
+DIRC detectors are based on the concept of the Detection of Internally Reflected Cherenkov light (DIRC) produced in a solid radiator bar to identify charged particle. It is a special type of Cherenkov counter, which uses the unique properties of Cherenkov radiation to identify charged particle species.
 
 %-------------------------------------------------------------------------------
 %	CHERENKOV RADIATION SECTION
@@ -28,7 +28,7 @@ where $\omega_0$ is the central vale of the considered frequency range. Because 
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=1]{figures/Cherenkov_cone.pdf}
+	\includegraphics[scale=1]{Cherenkov_cone.pdf}
 	\caption{Illustration of the Cherenkov cone.}
 	\label{fig:cherenkovcone}
 \end{figure}
@@ -56,8 +56,8 @@ Threshold Cherenkov counters are detectors used for particle identification (PID
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=.8]{figures/angle_seperation_6.pdf}
-	\caption{Particle momentum versus Cherenkov angle for different particle species in fused silica ($n \approx 1.473$).}
+	\includegraphics[width=\textwidth]{angle_seperation_enhance.pdf}
+	\caption{Particle momentum [GeV/c] versus Cherenkov angle [mrad] for different particle species in fused silica ($n \approx 1.473$). The zoomed image shows that it is indeed possible to differentiate pions, kaons, and protons at higher particle momenta.}
 	\label{fig:angleseperation}
 \end{figure}
 
@@ -65,32 +65,68 @@ Threshold Cherenkov counters are detectors used for particle identification (PID
 %	RICH SECTION
 %-------------------------------------------------------------------------------
 \section{Ring Imaging Detectors}
-Ring Imaging Cherenkov (RICH) detectors are designed to efficiently identify and separate different particle species over a wide range of momenta. A basic RICH system is shown in Figure \ref{fig:richbasics}. 
+Ring Imaging Cherenkov (RICH) detectors are designed to efficiently identify and separate different particle species over a wide range of momenta. A basic RICH system is shown in Figure \ref{fig:rich_basics}. 
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=\textwidth]{figures/RICH_rings.pdf}
+	\includegraphics[width=\textwidth]{RICH_rings.pdf}
 	\caption{Basic concept of a proximity focusing Ring Imaging Cherenkov (RICH) detector (a), and an example of how they can be used to do PID based on particle mass (b).}
-	\label{fig:richbasics}
+	\label{fig:rich_basics}
 \end{figure}
 
-A volume of radiator, either gaseous (e.g. $C_{4}F_{10}$) or solid (e.g. aerogel), is positioned upstream of an array of photosensors. A charged particle travelling through a thin radiator above the threshold velocity will continuously emit Cherenkov photons in a cone. The resulting image on the photosensor array is an annulus of thickness $L\tan\thetaC$, where $L$ is the distance the particle travelled inside the radiator, and  $\thetaC$ is the usual Cherenkov angle (Figure \ref{fig:richbasics}b).
-
-PID can be done by measuring the average radius of the annulus and reconstructing the Cherenkov angle geometrically.
+A volume of radiator, either gaseous (e.g. $C_{4}F_{10}$) or solid (e.g. aerogel), is positioned upstream of an array of photosensors. A charged particle traveling through a thin radiator above the threshold velocity will continuously emit Cherenkov photons in a cone. The resulting image on the photosensor array is an annulus of thickness $d\tan\thetaC$ and an inner radius of $L\tan\thetaC$, where $d$ is the distance the particle traveled inside the radiator, $L$ is the distance between the radiator and the photsensors, and  $\thetaC$ is the usual Cherenkov angle (Figure \ref{fig:rich_basics}b). PID is done by measuring the average radius of the annulus and reconstructing the Cherenkov angle geometrically.
 
 
 %-------------------------------------------------------------------------------
 %	DIRC SECTION
 %-------------------------------------------------------------------------------
 \section{DIRC Detectors}
-The basic components of a DIRC detector are shown in Figure \ref{fig:dircbasics}.
+DIRC detectors work much the same way as a RICH in that collect Cherenkov photons produced from a radiating material and use the created image on the photosensors to reconstruct the Cherenkov angle. In the case of a DIRC, the radiating medium is also used as a light guide as some of the Cherenkov photons undergo total internal reflection inside the radiator and are guided towards one end of the radiator to a readout (Figure \ref{fig:dircbasics}). The radiator of choice is a solid bar made of fused silica, with an index of refraction $n \approx 1.473$. A rectangular cross section and highly smoothed and polished sides ensure that the magnitude of the Cherenkov angle is preserved during internal reflection. Photons that are created propagating away from the readout are reflected back towards the readout by a mirror. Once the photons exit the radiator they are allowed to separate through an expansion volume before being imaged in both ($x, y$) position as well as time. The arrival position and propagation time of each detected photon are combined with tracking information to reconstruct the Cherenkov angle and determine the corresponding PID likelihoods.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.7]{figures/DIRC_components.pdf}
+	\includegraphics[scale=0.7]{DIRC_components.pdf}
 	\caption{The basic components of a DIRC detector: a solid radiator, typically fused silica (green); a mirror to redirect backward-going photons (pink); optional focusing optics (purple); an expansion volume to allow photons to separate in space (cyan); and a detector surface to record the position and arrival time of Cherenkov photons (maroon).}
 	\label{fig:dircbasics}
 \end{figure}
 
+The performance of a DIRC detector is given by the resolution in the Cherenkov polar opening angle of the particle track, $\sigma_{\thetaC,\text{track}}^2$, which can be written as:
+
+\begin{equation}
+	\sigma_{\thetaC,\text{track}}^2 = \sigma_{\thetaC}^2 / N_{\gamma} + \sigma_{\text{correlated}}^2
+	\label{eq:performance}
+\end{equation}
+
+where $\sigma_{\thetaC}$ is the average single photon Cherenkov angle resolution, $N_{\gamma}$ is the number of measured photons per track, and $\sigma_{\text{correlated}}$ includes several correlated terms that contribute to the resolution such as the uncertainty in the particle track direction coming from external tracking systems. Because the track direction is crucial to the reconstruction of the Cherenkov angle, this error needs to be small for the performance to not suffer. For the EIC a tracking resolution on the order of 1 mrad is required for adequate PID.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\textwidth]{BaBar_DIRC.png}
+	\caption{Schematic of BaBar DIRC and imaging region.}
+	\label{fig:babardirc}
+\end{figure}
+
+As of the writing of this thesis the only DIRC detector used in a full experiment is the BaBar DIRC at SLAC National Accelerator Laboratory, which was successfully operated from 1999 through 2008 \cite{BaBarDIRC}. It proved to be a robust, stable, and easy to operate system for more than 8 years, providing excellent pion/kaon separation for all tracks from $B$-meson decays. It used 4.9 m long radiator bars with a rectangular cross section of $17.25 \times 35 \unit{mm}^2$. Each bar was made of four $1.225\unit{m}$ long fused silica bars glued end-to-end. The bars were placed in 12 hermetically sealed containers, called bar boxes, each holding 12 radiator bars for a total of 144 bars. At the end of each box was attached a wedge of fused silica and a window to allow the photons to expand before entering the water-filled expansion volume and being read out on one of 10,752 photomultiplier tubes (see Figure \ref{fig:babardirc}). Figure \ref{fig:babarperformance} summarizes the performance of the BaBar DIRC, showing excellent Cherenkov angle reconstruction (2.5 mrad, only 14\% larger than the design goal of 2.2 mrad) and photon yield per track.
+
+\begin{figure}[ht]
+	\centering
+	a)%
+	\raisebox{-1.0\height}{\includegraphics[width=0.5\textwidth]{BaBar_SPR.png}}%
+	b)%
+	\raisebox{-1.0\height}{\includegraphics[width=0.5\textwidth]{BaBar_NPH.png}}
+	\caption{Performance of the BaBar DIRC for $e^{+}e^{-} \rightarrow \mu^{+}\mu^{-}$ events. a) shows the difference between the measured and expected Cherenkov angle (dots) and a Gaussian fit to the data with a 2.5 mrad width (line). b) is the average number of detected photons vs. track polar angle for data (dots) and Geant4 simulation (line).}
+	\label{fig:babarperformance}
+\end{figure}
+
+\subsection{Evolution of DIRC Detector Designs}
 \subsection{DIRCs in Future Experiments}
-EIC, PANDA, Bell, ToRCH, GlueX
+The BaBar DIRC has since inspired many other experiments to utilize this new, novel PID system in a variety of ways (Figure \ref{fig:dirc_evolution}. The Focusing DIRC (FDIRC) proposed for the now-cancelled SuperB collider in Italy was the first to propose using some form of focusing for the Cherenkov photons, allowing for a factor of 10 smaller expansion volume \cite{FDIRC}. The barrel DIRC for the PANDA experiment at FAIR in Germany will use shorter radiator bars for a more compact design, while the PANDA disc-shaped DIRC will be used in the 
+Along with the EIC, there are several detectors currently being planned that will include the use of DIRC detectors of some variation for their PID needs, including: the PANDA experiment at FAIR in Germany, the Belle II detector at the KEKB accelerator in Japan, the ToRCH detector at LHCb in France, and the GlueX experiment at JLab in the U.S.
+\comment{WRITE A SHORT PARAGRAPH ABOUT EACH OF THE ABOVE EXPERIMENTS AND GIVE A CITATION FOR EACH}
+
+\begin{figure}
+	\centering
+	%\includegraphics[scale=1]{DIRC_evolution.pdf}
+	\caption{Evolution of the DIRC concept. From top left to bottom right:}
+	\label{fig:dirc_evolution}
+\end{figure}
