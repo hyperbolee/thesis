@@ -81,7 +81,7 @@ A volume of radiator, either gaseous (e.g. $C_{4}F_{10}$) or solid (e.g. aerogel
 %	DIRC SECTION
 %-------------------------------------------------------------------------------
 \section{DIRC Detectors}
-DIRC detectors work much the same way as a RICH in that collect Cherenkov photons produced from a radiating material and use the created image on the photosensors to reconstruct the Cherenkov angle. In the case of a DIRC, the radiating medium is also used as a light guide as some of the Cherenkov photons undergo total internal reflection inside the radiator and are guided towards one end of the radiator to a readout (Figure \ref{fig:dircbasics}). The radiator of choice is a solid bar made of fused silica, with an index of refraction $n \approx 1.473$. A rectangular cross section and highly smoothed and polished sides ensure that the magnitude of the Cherenkov angle is preserved during internal reflection. Photons that are created propagating away from the readout are reflected back towards the readout by a mirror. Once the photons exit the radiator they are allowed to separate through an expansion volume before being imaged in both ($x, y$) position as well as time. The arrival position and propagation time of each detected photon are combined with tracking information to reconstruct the Cherenkov angle and determine the corresponding PID likelihoods.
+DIRC detectors work much the same way as a RICH in that collect Cherenkov photons produced from a radiating material and use the created image on the photosensors to reconstruct the Cherenkov angle. In the case of a DIRC, the radiating medium is also used as a light guide as some of the Cherenkov photons undergo total internal reflection inside the radiator and are guided towards one end of the radiator to a readout (Figure \ref{fig:dircbasics}). The radiator of choice is a solid bar made of fused silica, with an index of refraction $n \approx 1.473$. A rectangular cross section and highly smoothed and polished sides ensure that the magnitude of the Cherenkov angle is preserved during internal reflection. Photons that are created propagating away from the readout are reflected back towards the readout by a mirror. Once the photons exit the radiator they are allowed to separate through an expansion volume before being imaged in both ($x, y$) position as well as time. The arrival position and propagation time of each detected photon are combined with tracking information to reconstruct the Cherenkov angle and determine the corresponding PID likelihoods (reconstruction methods and techniques for DIRC detectors will be discussed in detail in Chapter \ref{ch:analysis}).
 
 \begin{figure}[ht]
 	\centering
@@ -118,15 +118,12 @@ As of the writing of this thesis the only DIRC detector used in a full experimen
 	\label{fig:babarperformance}
 \end{figure}
 
-\subsection{Evolution of DIRC Detector Designs}
 \subsection{DIRCs in Future Experiments}
-The BaBar DIRC has since inspired many other experiments to utilize this new, novel PID system in a variety of ways (Figure \ref{fig:dirc_evolution}. The Focusing DIRC (FDIRC) proposed for the now-cancelled SuperB collider in Italy was the first to propose using some form of focusing for the Cherenkov photons, allowing for a factor of 10 smaller expansion volume \cite{FDIRC}. The barrel DIRC for the PANDA experiment at FAIR in Germany will use shorter radiator bars for a more compact design, while the PANDA disc-shaped DIRC will be used in the 
-Along with the EIC, there are several detectors currently being planned that will include the use of DIRC detectors of some variation for their PID needs, including: the PANDA experiment at FAIR in Germany, the Belle II detector at the KEKB accelerator in Japan, the ToRCH detector at LHCb in France, and the GlueX experiment at JLab in the U.S.
-\comment{WRITE A SHORT PARAGRAPH ABOUT EACH OF THE ABOVE EXPERIMENTS AND GIVE A CITATION FOR EACH}
+The BaBar DIRC has since inspired many other experiments/facilities, including the EIC, to utilize this new, novel PID system in a variety of ways (Figure \ref{fig:dirc_evolution}). The Focusing DIRC (FDIRC) proposed for the now-cancelled SuperB collider in Italy was the first to propose using some form of focusing for the Cherenkov photons, allowing for a factor of 10 smaller expansion volume \cite{FDIRC}. The barrel DIRC for the PANDA experiment at FAIR in Germany will use shorter radiator bars for a more compact design \cite{PANDA_barrel}, while the PANDA disc DIRC will be used in the forward region and will be the first disc DIRC to be used in a high-performance $4\pi$ detector \cite{PANDA_disc}. Belle II at the SuperKEKB accelerator in Japan will utilize wide plates as radiators and focus on fast timing for PID in the barrel region \cite{Belle2_TOP}. The TORCH detector, similar to the PANDA disc DIRC, will be a large-area detector focusing on precision time-of-flight to do PID for low momentum kaons at the upgraded LHCb experiment \cite{TORCH}. The GlueX experiment at JLab will be recycling four bar boxes from the BaBar experiment to cover the forward region of their spectrometer; utilizing  focusing similar to the FDIRC design \cite{GlueX}.
 
-\begin{figure}
+\begin{figure}[ht]
 	\centering
-	%\includegraphics[scale=1]{DIRC_evolution.pdf}
-	\caption{Evolution of the DIRC concept. From top left to bottom right:}
+	\includegraphics[width=\textwidth]{dirc_evolution.pdf}
+	\caption{Evolution of the DIRC concept. From top left to bottom right: BaBar Barrel DIRC, Focusing DIRC, PANDA Barrel DIRC, PANDA Disc DIRC, Belle II Time of Propagation DIRC, LHCb TORCH DIRC, GlueX DIRC, EIC DIRC}
 	\label{fig:dirc_evolution}
 \end{figure}
