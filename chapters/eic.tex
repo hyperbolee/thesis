@@ -52,11 +52,32 @@ As mentioned above, the EMC effect, the modification of the distribution of quar
 \section{Facilities}
 As of the writing of this thesis there are two competing designs for an EIC facility to be built in the United States: a figure-8 accelerator design for Thomas Jefferson National Accelerator Facility (JLab) (Figure \ref{fig:jleic_layout}), and a ring-ring accelerator design for Brookhaven National Lab (BNL) (Figure \ref{fig:erhic_layout}).
 
+The JLab EIC (JLEIC) is planned to be approximately 1.4 km in circumference and have a footprint of roughly 500 m by 170 m. The design is a ring-ring with electrons and ions being stored in separate beam lines and collided at two interaction points  (IPs) (outlined in red in Figure \ref{fig:jleic_layout}) on the figure-8. The JLab CEBAF SRF linac will be used as an electron injector for electrons with 3 - 11 GeV energy. The second ring will store an ion beam with energy of 20 to 100 GeV for protons or up to 40 GeV per nucleon for light to heavy ions. The ion beams are generated and accelerated in a new ion injector complex with the same figure-8 design that will be utilized to preserve ion polarization. The two rings will be stacked vertically in the same underground tunnel \cite{JLEICdesign}.
+
+The BNL facility, named eRHIC, will use a new electron beam facility based on an Energy Recovery LINAC that will be built inside of the Relativistic Heavy Ion Collider (RHIC) tunnel to collide with RHIC's pre-existing polarized proton/ion beam. The existing hadron ring will accelerate protons up to 250 GeV/c, $^3$He$^{+2}$ up to 167 GeV/c per nucleon, and heavier ions (e.g. gold or uranium) up to 100 GeV/c per nucleon. The new electron ring will be capable of producing electrons from 2 - 21 GeV/c \cite{eRHICdesign}. Figure \ref{fig:erhic_layout} shows the current design layout of the eRHIC facility (top) and the Brookhaven eA Solenoidal Tracker (BeAST) detector proposed for the interaction region (bottom).
+
+%-------------------------------------------------------------------------------
+%	PARTICLE ID SUBSECTION
+%-------------------------------------------------------------------------------
+\subsection{Particle Identification Requirements and Solutions}
+The large center of mass energies and diverse physics program at an EIC necessitate a very sophisticated detector suite. The most basic process that the EIC will observe is inclusive Deep Inelastic Scattering (DIS). This process will produce many different combinations of final-state hadrons over a wide angular distribution for a given kinematic setting of $x$ and $Q^2$. Coupled with the large beam energies, there is a need of PID over a large range in the hadron endcap (up to 50 GeV/c), range up to the beam energy in the electron endcap (up to 12 GeV/c), and a moderate range in the central barrel region (up to 6 GeV/c). The ability to accurately identify hadrons in the final state is therefore a key requirement for the physics program, as is shown by Figure \ref{fig:pythia_DIS} which shows the momentum distributions of pions and kaons for each region of interest for typical beam energies for both BNL and JLab.
+
+As can be seen in Figures \ref{fig:jleic_layout} and \ref{fig:erhic_layout}, the layouts of the two detector concepts for JLab and BNL are slightly different, but the solutions for PID requirements are very similar. In the hadron endcap, because of the large final state energies the ideal PID detector would be a gaseous, mirror-based Ring Imaging Cherenkov (RICH) detector which would be capable of the required 50 GeV/c momentum resolution. The hadrons produced going towards the electron endcap scales in both energy and quantity with the energy of the electron beam energy. Although the maximum electron beam energies of JLab and BNL differ, a 10 GeV/c momentum resolution seems to be suitable for both facilities, and so a modular aerogel RICH detector is currently under development. In the central barrel region the necessary momentum coverage is not as high as that of the endcaps because the transferse momentum transfer from the electron beam to the ion beam is relatively small, on the order of 7 GeV/c. This smaller momentum range coupled with a smaller space to fit a detector make a detector based on Detection of Internally Reflected Cherenkov light (DIRC) technology, the main subject of this thesis, an ideal solution for PID in this region.
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\textwidth]{pythia_DIS_regions.pdf}
+	\caption{Momentum distributions for pions (blue) and kaons (magenta) from the pythia simulation package for DIS events corresponding to collisions between 10 GeV electrons and 100 GeV protons, a common BNL/JLab kinematic, shown for a bin of $10<Q2<100\unit{GeV}^2$.}
+	\label{fig:pythia_DIS}
+\end{figure}
+
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\textwidth]{JLEIC_layout2.pdf}
 	\includegraphics[width=\textwidth]{JLEIC_detector.pdf}
-	\caption{Current design of the EIC facility for JLab with the two interaction points highlighted in red (top), and the current baseline design for the detector at IP1 (bottom).}
+	\caption{Current design of the EIC facility for JLab with the two interaction points (IPs) highlighted in red (top), and the current baseline design for the detector at IP1 (bottom).}
 	\label{fig:jleic_layout}
 \end{figure}
 
@@ -67,19 +88,3 @@ As of the writing of this thesis there are two competing designs for an EIC faci
 	\caption{Current design of the EIC facility at BNL (top), and the proposed BeAST (Brookhaven eA Solenoidal Tracker) detector (bottom).}
 	\label{fig:erhic_layout}
 \end{figure}
-
-The JLab EIC (JLEIC) is planned to be approximately 1.4 km in circumference and have a footprint of roughly 500 m by 170 m. The design is a ring-ring with electrons and ions being stored in separate beam lines and collided at two interaction points  (IPs) (outlined in red in Figure \ref{fig:jleic_layout}) on the figure-8. The JLab CEBAF SRF linac will be used as an electron injector for electrons with 3 - 11 GeV energy. The second ring will store an ion beam with energy of 20 to 100 GeV for protons or up to 40 GeV per nucleon for light to heavy ions. The ion beams are generated and accelerated in a new ion injector complex with the same figure-8 design that will be utilized to preserve ion polarization. The two rings will be stacked vertically in the same underground tunnel \cite{JLEICdesign}.
-
-The BNL facility, named eRHIC, will use a new electron beam facility based on an Energy Recovery LINAC that will be built inside of the Relativistic Heavy Ion Collider (RHIC) tunnel to collide with RHIC's pre-existing polarized proton/ion beam. The existing hadron ring will accelerate protons up to 250 GeV/c, $^3$He$^{+2}$ up to 167 GeV/c per nucleon, and heavier ions (e.g. gold or uranium) up to 100 GeV/c per nucleon. The new electron ring will be capable of producing electrons from 2 - 21 GeV/c \cite{eRHICdesign}. Figure \ref{fig:erhic_layout} shows the current design layout of the eRHIC facility (top) and the Brookhaven eA Solenoidal Tracker (BeAST) detector proposed for the interaction region (bottom).
-
-%-------------------------------------------------------------------------------
-%	JLEIC DETECTOR SECTION
-%-------------------------------------------------------------------------------
-\subsection{JLEIC Detector Design}
-The large center of mass energies and diverse physics program at an EIC necessitate a very sophisticated detector system. Figure \ref{fig:jleic_layout} (bottom) shows the current design of the JLab EIC detector at IP1. 
-
-%-------------------------------------------------------------------------------
-%	PARTICLE ID SUBSECTION
-%-------------------------------------------------------------------------------
-\subsection{Particle Identification Requirements}
-The ability to accurately identify hadrons in the final state is a key requirement for the physics program at an EIC.
