@@ -8,7 +8,7 @@ Although it would theoretically be possible to study these properties using fixe
 
 The EIC will not be the first facility to have the capability of colliding electrons and positrons with protons. The HERA accelerator in Hamburg, Germany was the world's first electron-proton collider, reaching electron energies of up to 28 GeV and protons to nearly 1 TeV with a luminosity on the order of $10^{31}\unit{cm}^{-2}\unit{s}^{-1}$ before shutting down in 2007. Figure \ref{fig:HERA_pdf} shows the combined H1 and Zeus experimental data from HERA for the measurement of the structure function for positron-proton scattering along with fixed target data for a wide range of both $x$ and $Q^2$. The EIC hopes to improve upon the already rich science produced at HERA threefold: by increasing the luminosity of the accelerator to on the order of $10^{34}\unit{cm}^{-2}\unit{s}^{-1}$, by allowing for the use of heavier ion beams such as oxygen, and by allowing for both transversely and longitudinally polarized beams of electrons and light ions. With these improvements the EIC will be able to look into hadronic final states with much greater detail.
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
 	\centering
 	\includegraphics[scale=0.7]{HERA_PDF.pdf}
 	\caption{The reduced cross section $\sigma_{r}(x,Q^2)$ as a function of $Q^2$. Filled circles are combined H1 and Zeus data from HERA for proton-positron collisions, hollow squares are from fixed target experiments, and the yellow is prediction from HERAPDF0.1. \cite{HERAStructureFunction}}
@@ -24,7 +24,7 @@ The goal of an EIC will be to find out how QCD is responsible for the structure 
 \subsection{Nucleon Spin}
 One major question still pestering nuclear physicists is ``What is the origin of the nucleon spin?''. In the 1980s the naive answer was that the total nucleon spin was the sum of the spin of its three valance quarks, but many years of experimentation has revealed that it is much more complicated (Fig. \ref{fig:nucleon_spin}), with the contributions both from quark and gluon spin and orbital angular momentum still in question. The EIC will be capable of much more detailed study of the contributions to the nucleon structure by enabling multi-dimensional projections of the distribution of quarks and gluons in space, longitudinal and transverse momenta, spin, and flavor.
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
 	\centering
 	\includegraphics[scale=.08]{nucleon_spin.png}
 	\caption{Evolution of our understanding of nucleon spin structure. Left: In the 1980s, a nucleon’s spin was naively explained by the alignment of the spins of its constituent quarks. Right: In the current picture, valence quarks, sea quarks and gluons, and their possible orbital motion are expected to contribute to overall nucleon spin. \cite{EICWhitePaper}}
@@ -34,7 +34,7 @@ One major question still pestering nuclear physicists is ``What is the origin of
 \subsection{The EMC Effect}
 It was first observed by the European Muon Collaboration (EMC), and confirmed by other experiments that there is a modification between the nucleon structure function, $F_2$, of deuterium to those of heavier elements as a function of Bjorken $x$ \cite{SRC_EMC_effect}. Figure \ref{fig:emc_effect} shows the ratios of the Deep Inelastic Scattering (DIS) cross sections of ${}^3$He (top) to Deuterium and ${}^4$He (bottom) to Deuterium as examples of this effect. Initial assumptions were that these cross section ratios would be unity, but measurements have clearly shown a suppression in this ratio for $0.3 < x < 0.8$, the now-called EMC Effect. One can also see an enhancement of the ratio for $0.1 < x < 0.3$ known as anti-shadowing, and the region of $x < 0.1$ where the ratio is again suppressed is the shadowing region.
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
 	\centering
 	\includegraphics[scale=0.85]{EMC_He.png}
 	\caption{Top: Ratios of ${}^3$He to Deuterium DIS cross sections from JLab (circles) and HERMES (triangles). Bottom: Ratios of ${}^4$He to Deuterium DIS cross sections from JLab (circles), SLAC (squares), and HERMES (triangles) \cite{EMC_Challenge}.}
@@ -65,7 +65,7 @@ The large center of mass energies and diverse physics program at an EIC necessit
 As can be seen in Figures \ref{fig:jleic_layout} and \ref{fig:erhic_layout}, the layouts of the two detector concepts for JLab and BNL are slightly different, but the solutions for PID requirements are very similar. In the hadron endcap, because of the large final state energies the ideal PID detector would be a gaseous, mirror-based Ring Imaging Cherenkov (RICH) detector which would be capable of the required 50 GeV/c momentum resolution. The hadrons produced going towards the electron endcap scales in both energy and quantity with the energy of the electron beam energy. Although the maximum electron beam energies of JLab and BNL differ, a 10 GeV/c momentum resolution seems to be suitable for both facilities, and so a modular aerogel RICH detector is currently under development. In the central barrel region the necessary momentum coverage is not as high as that of the endcaps because the transferse momentum transfer from the electron beam to the ion beam is relatively small, on the order of 7 GeV/c. This smaller momentum range coupled with a smaller space to fit a detector make a detector based on Detection of Internally Reflected Cherenkov light (DIRC) technology, the main subject of this thesis, an ideal solution for PID in this region.
 
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.72\textwidth]{pythia_DIS_regions.pdf}
 	\caption{Momentum distributions for pions (red) and kaons (blue) in the electron endcap (top), barrel region (middle), and hadron endcap (bottom). Plots were produced using the pythia simulation package for DIS events corresponding to collisions between 10 GeV electrons and 100 GeV protons, a common BNL/JLab kinematic, shown for a bin of $10<Q2<100\unit{GeV}^2$.}
@@ -73,7 +73,7 @@ As can be seen in Figures \ref{fig:jleic_layout} and \ref{fig:erhic_layout}, the
 \end{figure}
 
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{JLEIC_layout2.pdf}
 	\includegraphics[width=\textwidth]{JLEIC_detector.pdf}
@@ -81,7 +81,7 @@ As can be seen in Figures \ref{fig:jleic_layout} and \ref{fig:erhic_layout}, the
 	\label{fig:jleic_layout}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{eRHIC_Layout.jpeg}
 	\includegraphics[width=0.9\textwidth]{eRHIC_beast.pdf}
