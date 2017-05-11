@@ -18,7 +18,7 @@ The PANDA prototype was situated in the CERN Proton Synchrotron (PS) T9 experime
 	\label{fig:testbeam_2015}
 \end{figure}
 
-A CAD drawing of the experimental setup in the T9 hall can be seen in Figure \ref{fig:testbeam_2015}. The DIRC prototype was situated between two time-of-flight (TOF) detectors that were spaced 29 m apart to tag protons and pions. Figure \ref{fig:TOF_PID} shows the time-based separation of different particle species for 4 different beam momenta. Two scintillator counters (named Trigger 1 and Trigger 2) were placed in front of and behind the prototype. A coincidence of the trigger signals was used as the DAQ event recording trigger. Two veto counters were also set up in front of the two TOF detectors to reject background particles that strayed significantly from the beam path.
+A CAD drawing of the experimental setup in the T9 hall can be seen in Figure \ref{fig:testbeam_2015}. The DIRC prototype was situated between two time-of-flight (TOF) detectors that were spaced 29 m apart to tag protons and pions. Figure \ref{fig:TOF_PID} shows the time-based separation of different particle species for 4 different beam momenta. Two scintillator counters (named Trigger 1 and Trigger 2) were placed in front of and behind the prototype. A coincidence of the trigger signals was used as the DAQ event recording trigger. Two veto counters were also set up between the two TOF detectors to reject background particles that strayed significantly from the beam path.
 
 \begin{figure}[!htb]
 	\centering
@@ -85,18 +85,56 @@ Figure \ref{fig:proton_track_example}a shows an example of one simulated proton 
 %	DATA ANALYSIS SECTION
 %----------------------------------------------------------------------
 \section{Data Analysis}
+\subsection{Event Selection}
+The prototype data taken were stored in the list mode data format of the HADES DAQ system prototcol \cite{HADES_DAQ} and converted offline into the CERN ROOT data format \cite{ROOT} for analysis. The DAQ was started by a signal from Trigger 1, and events were required to have signals in Trigger 1, Trigger 2, and both TOF counters to ensure a well-defined beam spot and valid $\pi/p$ tagging from the TOF system. The veto counters were also required in event selection, but later found to be unnecessary for constraining the beam spot.
+
+MCP-PMT signals, or hits, were selected in a time window of $\pm 40$ ns relative to the Trigger 1 time. Channels with large electronics noise above 1 MHz and one defective PADIWA card were masked, with the same masking scheme applied to the simulation. Events with 5 or fewer MCP-PMT hits were also excluded from reconstruction due to lack of statistics.
+
+As mentioned previously the timing difference between the two TOF stations allowed for tagging an event as either pion or proton. Figure \ref{fig:tof_timing} shows the TOF time distributions for 5 GeV/c (top) and 7 GeV/c (bottom) beam momenta. These distributions were fitted with Gaussian functions near the proton and pion peaks and a $\pm2\sigma$ window around the peaks was used for selection (dashed lines).
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=\textwidth]{TOF_timing.pdf}
+	\caption{Time difference between the two TOF stations for beam momenta of 5 GeV/c (top) and 7 GeV/c (bottom). The peaks were fitted and a $\pm2\sigma$ selection window was taken (dashed lines).}
+	\label{fig:tof_timing}
+\end{figure}
+
+The timing of the hits in the MCP-PMTs were also constrained. Based on the orientation of the detector in the beam the time for the photon to propagate can be calculated, giving an expected arrival time. Comparing the difference between this expected arrival time and the actual arrival time of the photons gives a time difference distribution. Figure \ref{fig:time_difference}
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=\textwidth]{time_difference.png}
+	\caption{time measured - expected}
+	\label{fig:time_difference}
+\end{figure}
 
 \subsection{Calibration and Corrections}
-charge sharing correction
 
-per-MCP thetaC correction
+\subsubsection{Charge Sharing Correction for LUT Reconstruction}
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=\textwidth]{charge_sharing.pdf}
+	\caption{a) a zoom in on a single MCP showing an example hit pattern from a single particle track. The 3 isolated pixels (red) have no neighboring hits. The 3 clustered hits (green), however, are touching other firing pixels and thus it is hard to determine with timing alone if these are the result of a single photon from the bottom right pixel that resulted in charge sharing, 3 independent photons hitting all 3 pixels, or some combination of 2 photons hitting 2 of the pixels that resulted in charge sharing. To compensate for this uncertainty each pixel is subdivided, as in (b), into 9 regions such that the LUT will reconstruct the photon angle from different areas of the pixel. For the case of (a) the top pixel in the cluster would be reconstructed from point 7, the bottom left pixel from point 5, and the bottom right pixel from point 2, while the 3 isolated pixels would all be reconstructed from point 0.}
+	\label{fig:charge_sharing}
+\end{figure}
 
-\subsection{Event Selection $\uparrow$?}
 
-\subsection{Simulated Background Subtraction (?)}
+\subsubsection{Per-MCP $\theta_{C}$ Correction}
+\comment{have 1 section devoted all corrections software and hardware and all the contributions to the resolution and error (binning, etc)}
+
+\subsection{Geometrical Reconstruction}
+
+\subsubsection{Simulated Background Subtraction}
 possibility of using simulated background subtraction for data
 
 
-\subsection{Error Evaluation}
+\subsubsection{Error Evaluation}
+file internal consistency (e.g. comparing every 100 events)
+
+varying gaus+background fit and range
+
+consistency from different runs (comparing 151 to 158)
+
+\subsection{Time-based Reconstruction}
 
 \section{Results and Conclusions}
