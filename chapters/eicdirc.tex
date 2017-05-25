@@ -2,7 +2,7 @@
 %	DIRC@EIC CHAPTER
 %----------------------------------------------------------------------
 \label{ch:eicdirc}
-The BaBar DIRC was able to reach a performance of 3 standard deviations (s.d.) separation for pions and kaons at up to 4 GeV/c particle momentum. PANDA Barrel DIRC wishes to achieve similar performance, but due to space constraints they will be using a smaller expansion volume and must therefore rely on optical focusing of the Cherenkov photons to reach this performance. In both cases the separation power requires a per track Cherenkov angle resolution (Eq. \ref{eq:performance}) of 2.5 mrad The physics goals of an EIC require a pion/kaon separation of 3 s.d. at up to 6 GeV/c momentum, which requires 1 mrad track Cherenkov angle resolution. The graph in Figure \ref{fig:PID_performance} shows pion-kaon separation as a function of particle momentum for different assumptions of the per track Cherenkov angle resolution, highlighting the achieved performance of BaBar and the desired performance of PANDA and EIC. In order to reach this high resolution in a compact space the EIC DIRC must incorporate cutting-edge technology in focusing optics and photo sensor granularity and timing resolution.
+The BaBar DIRC was able to reach a performance of 3 standard deviations (s.d.) separation for pions and kaons at up to 4 GeV/c particle momentum. The PANDA Barrel DIRC wishes to achieve similar performance, but due to space constraints they will be using a smaller expansion volume and must therefore rely on optical focusing of the Cherenkov photons to reach this performance. In both cases the separation power requires a per track Cherenkov angle resolution (Eq. \ref{eq:performance}) of 2.5 mrad The physics goals of an EIC require a pion/kaon separation of 3 s.d. at up to 6 GeV/c momentum, which requires 1 mrad track Cherenkov angle resolution. The graph in Figure \ref{fig:PID_performance} shows pion-kaon separation as a function of particle momentum for different assumptions of the per track Cherenkov angle resolution, highlighting the achieved performance of BaBar and the desired performance of PANDA and EIC. In order to reach this high resolution in a compact space the EIC DIRC must incorporate cutting-edge technology in focusing optics and photo sensor granularity and timing resolution.
 
 \begin{figure}[!htb]
 	\centering
@@ -15,12 +15,12 @@ The BaBar DIRC was able to reach a performance of 3 standard deviations (s.d.) s
 %	CURRENT BASELINE DESIGN SECTION
 %----------------------------------------------------------------------
 \section{High-Performance DIRC Components and Design}
-The baseline design of a DIRC for EIC has been constructed in a Geant4 simulation, as shown in Figure \ref{fig:baseline_design}. There are 16 modules, called bar boxes, each containing 11 radiator bars 4200 mm long with a cross section of $17\times35.4\unit{mm}^2$. The 16 bar boxes are arranged in a barrel with a radius of 1 m around the beam line. Mirrors are coupled to one end of each bar, and a special 3-layer lens, discussed in more detail later, is attached to the other end. The lens is then coupled directly to a prism-shaped expansion volume made of fused silica, the same material as the radiator bars. The prism has an opening angle of $38^\circ$ with dimensions of $284.3\times390\times300\unit{mm}^3$. The $284.3\times390\unit{mm}^2$ detector plane of each prism is covered with micro-channel plate photomultiplier tubes (MCP-PMTs) with 27,690 $2\times2\unit{mm}^2$ pixels, for a total of 443,040 channels across the entire detector to record the location and arrival time of each detected Cherenkov photon. The dependence of the performance on the granularity of the detectors is shown later in this chapter.
+The baseline design of a DIRC for EIC has been constructed in a GEANT4 simulation, as shown in Figure \ref{fig:baseline_design}. There are 16 modules, called bar boxes, each containing 11 radiator bars 4200 mm long with a cross section of $17\times35.4\unit{mm}^2$. The 16 bar boxes are arranged in a barrel with a radius of 1 m around the beam line. Mirrors are coupled to one end of each bar, and a special 3-layer lens, discussed in more detail later, is attached to the other end. The lens is then coupled directly to a prism-shaped expansion volume made of fused silica, the same material as the radiator bars. The prism has an opening angle of $38^\circ$ with dimensions of $284.3\times390\times300\unit{mm}^3$. The $284.3\times390\unit{mm}^2$ detector plane of each prism is covered with micro-channel plate photomultiplier tubes (MCP-PMTs) with 27,690 $2\times2\unit{mm}^2$ pixels, for a total of 443,040 channels across the entire detector to record the location and arrival time of each detected Cherenkov photon. The dependence of the performance on the granularity of the detectors is shown later in this chapter.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{EIC_DIRC_baseline.pdf}
-	\caption{Left: full Geant4 simulation of the current DIRC at EIC baseline design with 16 bar boxes, 176 radiator bars, a 3-layer lens focusing optic, and a $38^\circ$ prism expansion volume. Right: a zoom in on a single bar box and the layering of the lens.}
+	\caption{Left: full GEANT4 simulation of the current DIRC at EIC baseline design with 16 bar boxes, 176 radiator bars, a 3-layer lens focusing optic, and a $38^\circ$ prism expansion volume. Right: a zoom in on a single bar box and the layering of the lens.}
 	\label{fig:baseline_design}
 \end{figure}
 
@@ -70,11 +70,12 @@ The 2-layer lens design solves the problem of photon yield loss from the air gap
 %	SIMULATION SECTION
 %----------------------------------------------------------------------
 \section{Simulated Performance}
-Reconstruction of the Cherenkov angle for kaons (top) and pions (bottom) at 6 GeV/c with a $125^{\circ}$ polar angle using the design parameters above are shown in Figure \ref{fig:EIC_track_res}. The signal is very clean and the mean and SPR of the distribution are easily extracted. Figure \ref{fig:EIC_performance}a shows the photon yield, or multiplicity, per polar angle for 50 6 GeV/c pions, and Figure \ref{fig:EIC_performance}b shows the SPR per polar track for 50 6 GeV/c kaons (red) and pions (blue). The per track Cherenkov angle resolution, given by (\ref{eq:performance}), is shown in Figure \ref{fig:EIC_track_res} for assumptions of 0.25 mrad (black), 0.5 mrad (red), 0.75 (green), and 1 mrad (blue) correlated term contributions with 6 GeV/c pions \footnote{NB: the per track Cherenkov angle resolution will be slightly different for each particle species, however because the SPR for each particle is almost identical showing only the results for pions is sufficient.}.  The simulations were done assuming that the sides of the 3-layer lens focusing optic were not reflective, therefore reducing the photon yield and making the performance slightly worse.
+
+\subsection{Geometric Reconstruction}
+Reconstruction of the Cherenkov angle for kaons and pions at 6 GeV/c with a $125^{\circ}$ polar angle using the design parameters above are shown in Figure \ref{fig:EIC_track_res}. The signal is very clean and the mean and SPR of the distribution are easily extracted. Figure \ref{fig:EIC_performance}a shows the photon yield, or multiplicity, per polar angle for 50 6 GeV/c pions, and Figure \ref{fig:EIC_performance}b shows the SPR per polar angle for 50 6 GeV/c kaons (red) and pions (blue). The per track Cherenkov angle resolution, given by (\ref{eq:performance}), is shown in Figure \ref{fig:EIC_track_res} for assumptions of 0.25 mrad (black), 0.5 mrad (red), 0.75 (green), and 1 mrad (blue) correlated term contributions with 6 GeV/c pions \footnote{NB: the per track Cherenkov angle resolution will be slightly different for each particle species, however because the SPR for each particle is almost identical showing only the results for pions is sufficient.}.  The simulations were done assuming that the sides of the 3-layer lens focusing optic were not reflective, therefore reducing the photon yield and making the performance slightly worse.
 
 The SPR of the reconstructed Cherenkov angle was found to scale roughly linearly with the size of the pixel size of the MCP-PMTs, as shown in Figure \ref{fig:EIC_sensor_scaling}. Clearly the 4 mm pixel size, though not ideal, is comparable in performance to the 2 mm pixel size. This is an important factor to consider in the final design due to the rapid increase of the cost per pixel of MCP-PMTs as the size of the pixels decreases.
 
-Overall these results show that due to the design's large expansion volume, small pixel size, and ease of signal reconstruction the performance of this design can reach the desired performance for the required physics.
 
 \begin{figure}[!htb]
 	\centering
@@ -105,6 +106,24 @@ Overall these results show that due to the design's large expansion volume, smal
 	\label{fig:EIC_sensor_scaling}
 \end{figure}
 
+\subsection{Time-based Reconstruction}
+The methods for time-based reconstruction, as described in Chapter \ref{ch:dirc}, were also implemented for the EIC DIRC: 60,000 pions and kaons were simulated in GEANT4 using the current EIC DIRC design geometry and PDFs were generated for each detector pixel; the PDFs were then used to produce log-likelihood separation for each particle hypothesis. Figure \ref{fig:EIC_timebased_ex} shows the log-likelihood separation for pions and kaons at polar angle of $30^\circ$.  Figure \ref{fig:EIC_timebased_performance} shows the separation power (top) and the PID efficiency/mis-identification over all polar angles.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=\textwidth]{EIC_30deg_timebased_sep.png}
+	\caption{Example of log-likelihood separation for pions (red) and kaons (blue) at $30^\circ$ polar angle using time-based reconstruction.}
+	\label{fig:EIC_timebased_ex}
+\end{figure}
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=\textwidth]{EIC_timebased_performance.pdf}
+	\caption{\textbf{Top}: Separation power as a function of polar angle for 6 GeV/c pions and kaons using time-based reconstruction. \textbf{Bottom}: Efficiency (solid circles) of PID as a function of polar angle for pions (red) and kaons (blue) along with the mis-identification rate (open circles).}
+	\label{fig:EIC_timebased_performance}
+\end{figure}
+
+Overall the results for both geometric and time-based reconstruction show that due to the design's large expansion volume, small pixel size, and ease of signal reconstruction the performance of this design can reach the desired performance for the required physics.
 %----------------------------------------------------------------------
 %	DESIGN OPTIMIZATIONS SECTION
 %----------------------------------------------------------------------
