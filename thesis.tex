@@ -10,18 +10,23 @@
 \usepackage{ODUthesis}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{multirow}
+\usepackage{longtable}
+
 
 %Use this package and option to label equations, e.g. chapter 1 equation 2 is labeled as (1.2)
 
 \usepackage{amsmath}
 \numberwithin{equation}{chapter}
 
-%Use this package to label figures and tables similarly to chapters above
+%Use this package to label figures and tables similarly to equations above
 
-\usepackage[figurewithin=chapter]{caption}
+%\usepackage[figurewithin=chapter]{caption}
+%\usepackage[tablewithin=chapter]{caption}
 
 % Use this package to include URLs
 \usepackage{url}
+%\usepackage{hyperref}
 
 %This allows the use of scalable vector graphics (svg)
 %Must use \includesvg{} 
@@ -54,7 +59,7 @@
 %\newcommand{\quote}[1]{``#1''}
 
 % Define paths to figures and plots
-\graphicspath{{./figures/}{./plots/}}
+\graphicspath{{./figures/}{./plots/}{./plots/thetaC/}}
 
 % Set of commands to allow commenting in bold red
 % and listing all comments with page number
@@ -70,9 +75,9 @@
 
 \begin{document}
 
-\title{R\&D of a High-Performance DIRC Detector for use in an Electron-Ion Collider}
+\title{R\&D of a High-Performance DIRC Detector for a future Electron-Ion Collider}
 
-\author{S. Lee Allison}
+\author{Stacey Lee Allison}
 \principaladviser{Charles Hyde}
 %\member{Gagik Gavalian}
 \member{Mark Havey}
@@ -81,11 +86,13 @@
 \member{Mike Overstreet}  %title page. Use on instance of this command for each member of the
                    %committee other than the advisor up to a total of 5 members.
 
-\degrees{MS in Physics}
+\degrees{B.S. in Mathematics, University of North Georgia, May 2012 \\
+B.S. in Physics, University of North Georgia, May 2012 \\
+M.S. in Physics, Old Dominion University, May 2014}
 
 \dept{Physics}          %for example \dept{physics}
 
-\submitdate{August 2017}
+\submitdate{July 2017}
 
 %\phdfalse          %produces language on title page for Masters Thesis. 
                     %otherwise the default is for a Ph.D. dissertation.
@@ -96,43 +103,80 @@
 
 %\tablespagefalse   %suppresses List of Tables
 
-\vita{The text of the Vita goes here.}
+\vita{
+\textbf{}\\
+\textbf{Education}\\ 
+\\
+Old Dominion University, Norfolk, VA\\
+\begin{itemize}
+\item PhD Candidate in experimental nuclear physics, 2012--Present\\
+\item Master of Science, 2014\\
+\end{itemize}
+University of North Georgia, Dahlonega, GA\
+\begin{itemize}
+\item Bachelor of Science in Physics, 2012\\
+\item Bachelor of Science in Mathematics, 2012\\
+\item Minor in Computer Science, 2012
+\end{itemize}
+\textbf{Research Experience}\\
+\begin{itemize}
+\item 2015--Present: Graduate research assistant studying and optimizing the design of Electron-Ion Collider DIRC detector via hardware component tests and extensive Monte Carlo simulation.\\
+\item 2013--2015: Graduate research assistant running simulations and building electromagnetic calorimeter crystals for the Jefferson Lab Hall A DVCS experiment at Old Dominion University clean room.\\
+\end{itemize}
+\textbf{Publications}\\
+\begin{itemize}
+\item L. Allison, et al., ``High-performance DIRC detector for use in an Electron-Ion Collider", PoS, \textbf{ICHEP} (2016) 300.\\
+\item V. Sulkosky, et al., ``Studies of relative gain and timing response of fine-mesh photomultiplier tubes in high
+magnetic fields", NIST A, \textbf{827} (2016) 137.\\
+\item G. Kalicy, et al., ``High-performance DIRC detector for the future Electron Ion Collider experiment", JINST, \textbf{11} (2016) C07015. \\
+\item Y. Ilieva, et al., ``MCP-PMT studies at the High-B test facility at Jefferson Lab", JINST, \textbf{11} (2016) C03061.
+\end{itemize}
+}
 
 
-\abstract{An Electron-Ion Collider (EIC) is the next big scientific facility to be built in the United States, costing over \$1 billion in design and construction. The necessity for excellent hadronic particle identification around the electron/ion beam interaction point, namely in the barrel region, has pushed R\&D towards a Detection of Internally Reflected Cherenkov light (DIRC) detector design. In order to reach the desired performance of $3\sigma$ $\pi/K$ separation at 6 GeV/c particle momentum a new 3-layer spherical lens focusing optic was designed and tested in a prototype DIRC detector with a hadron-rich particle beam at the CERN PS. Measurements of the focal plane of the lens as well as radiation hardness of the lanthanum crown glass of the center layer were tested on test benches at Old Dominion University and the Catholic University of America. Results for these tests are presented here.}
+\abstract{An Electron-Ion Collider (EIC) is proposed as the next big scientific facility to be built in the United States, costing over \$1 billion in design and construction. 
+Each detector concept for the electron/ion beam interaction point is integrated into a large solenoidal magnet. 
+The necessity for excellent hadronic particle identification (pion/kaon/proton) in the barrel region of the solenoid has pushed research and development (R\&D) towards a new, high-performance Detection of Internally Reflected Cherenkov light (DIRC) detector design. 
+The passage of a high energy charged particle through a fused silica bar of the DIRC generates optical Cherenkov radiation. 
+A large fraction of this light propagates by total internal reflection to the end of the bar, where the photon trajectories expand in a large volume before reaching a highly segmented photo-detector array. 
+The spatial and temporal distribution of the Cherenkov light at the photo-detector array allows one to reconstruct the angle of emission of the light relative to the incident charged particle track.
+In order to reach the desired performance of $3\sigma$ $\pi/K$ separation at 6 GeV/c particle momentum a new 3-layer spherical lens focusing optic with a lanthanum crown glass central layer was designed to have a nearly flat focal plane. 
+In order to validate the EIC DIRC simulation package, a synergistic test beam campaign was carried out in 2015 at the CERN PS with the PANDA Barrel DIRC group using a prototype DIRC detector. 
+Along with the analysis of the CERN test beam data, measurements of the focal plane of the 3-layer lens were performed using a custom-built laser setup at Old Dominion University. 
+Radiation hardness of the lanthanum crown glass was tested using a 160~keV X-ray source and a monochromator at the Catholic University of America. Results of these test-bench experiments and the analysis of the 2015 CERN test beam data are presented here.}
 
 \beforepreface
 
 \prefacesection{Acknowledgements}
-
     %text of Acknowledgements goes here, any other preface section is inserted similarly by the command \prefacesection{Section Title}
+
+I would like to thank 
 
 \afterpreface
 
-\listofcomments
+%\listofcomments
 
     %The text of the thesis/dissertation begins here. The basic organization is in chapters, sections, subsections. 
 
 \chapter{Introduction}
 \input{chapters/introduction} % intro, eic, etc
-%
+
 \chapter{Electron-Ion Collider}
 \input{chapters/eic} % description of EIC and why it's needed
-%
+
 \chapter{DIRC Technology}
 \input{chapters/dirc} % explination of DIRC technology
-%
+
 \chapter{High-Performance DIRC@EIC}
 \input{chapters/eicdirc} % specifications of high-performance DIRC@EIC
-%
-%\chapter{Test Bench Evaluation of DIRC@EIC Components}
+
 \chapter{Testing DIRC Components}
 \input{chapters/components} % testing lens focal plane and rad hardness, and MCP-PMTs
-%
-\chapter{3-Layer Lens Performance in Particle Beam}
+
+\chapter{3-Layer Lens Performance in A Particle Beam}
 \input{chapters/analysis} % analysis results from CERN 2015 test beam
-%
-\chapter{Outlook and Summary}
+
+\chapter{Summary and Outlook}
 \input{chapters/summary} % outlook of future work and summary of results
 
   %This begins the list of reference or bibliography.
@@ -151,15 +195,17 @@
 
 \appendix
 
-\achapter{Signal Reconstruction Fitting}
+\setlength\LTcapwidth{\textwidth}
+\achapter{Geometric Reconstruction Fitting Parameters}
+\input{chapters/app_fitting}
 
-\achapter{Error Evaluation}
+\achapter{Error Evaluation for Geometric Reconstruction}
+\input{chapters/app_error}
 
 \newpage
 
 %The command below initiates printing of the vita page. The name and other information is taken from previous entries.
 
 \vitapage
-
 
 \end{document}

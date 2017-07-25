@@ -15,7 +15,7 @@ The BaBar DIRC was able to reach a performance of 3 standard deviations (s.d.) s
 %	CURRENT BASELINE DESIGN SECTION
 %----------------------------------------------------------------------
 \section{High-Performance DIRC Components and Design}
-The baseline design of a DIRC for EIC has been constructed in a GEANT4 simulation, as shown in Figure \ref{fig:baseline_design}. There are 16 modules, called bar boxes, each containing 11 radiator bars 4200 mm long with a cross section of $17\times35.4\unit{mm}^2$. The 16 bar boxes are arranged in a barrel with a radius of 1 m around the beam line. Mirrors are coupled to one end of each bar, and a special 3-layer lens, discussed in more detail later, is attached to the other end. The lens is then coupled directly to a prism-shaped expansion volume made of fused silica, the same material as the radiator bars. The prism has an opening angle of $38^\circ$ with dimensions of $284.3\times390\times300\unit{mm}^3$. The $284.3\times390\unit{mm}^2$ detector plane of each prism is covered with micro-channel plate photomultiplier tubes (MCP-PMTs) with 27,690 $2\times2\unit{mm}^2$ pixels, for a total of 443,040 channels across the entire detector to record the location and arrival time of each detected Cherenkov photon. The dependence of the performance on the granularity of the detectors is shown later in this chapter.
+The baseline design of a DIRC for EIC has been constructed in a GEANT4 simulation based on that of the PANDA prototype DIRC, as shown in Figure \ref{fig:baseline_design}. There are 16 modules, called bar boxes, each containing 11 radiator bars 4200 mm long with a cross section of $17\times35.4\unit{mm}^2$. The 16 bar boxes are arranged in a barrel with a radius of 1 m around the beam line. Mirrors are coupled to one end of each bar, and a special 3-layer lens, discussed in more detail later, is attached to the other end. The lens is then coupled directly to a prism-shaped expansion volume made of fused silica, the same material as the radiator bars. The prism has an opening angle of $38^\circ$ with dimensions of $284.3\times390\times300\unit{mm}^3$. The $284.3\times390\unit{mm}^2$ detector plane of each prism is covered with micro-channel plate photomultiplier tubes (MCP-PMTs) with 27,690 $2\times2\unit{mm}^2$ pixels, for a total of 443,040 channels across the entire detector to record the location and arrival time of each detected Cherenkov photon. The dependence of the performance on the granularity of the detectors is shown later in this chapter.
 
 \begin{figure}[!htb]
 	\centering
@@ -31,7 +31,7 @@ The baseline design of a DIRC for EIC has been constructed in a GEANT4 simulatio
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{airgap_dispersion.pdf}
-	\caption{Simulated hit pattern of PANDA DIRC without (black) and with (red) air gap lens focusing (a). On the outer edges of the ring image the lens is becoming dispersive  and losing photons, while near the center of the rings the lens does a good job of focusing the image, as seen more clearly in b).}
+	\caption[Simulated hit pattern of PANDA DIRC without (black) and with (red) air gap lens focusing (a). On the outer edges of the ring image the lens is becoming dispersive  and losing photons, while near the center of the rings the lens does a good job of focusing the image, as seen more clearly in b).]{Simulated hit pattern of PANDA DIRC without (black) and with (red) air gap lens focusing (a) \cite{GregThesis}. On the outer edges of the ring image the lens is becoming dispersive  and losing photons, while near the center of the rings the lens does a good job of focusing the image, as seen more clearly in b).}
 	\label{fig:airgap_dispersion}
 \end{figure}
 
@@ -42,11 +42,11 @@ A 2-layer compound lens composed of fused silica and a layer of high-refractive 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{lens_photon_yield_comparison.pdf}
-	\caption{Comparison of the photon yield per track for a DIRC bar with no focusing (green), a standard air gap lens (red), and a 2-layer compound lens (blue) for polar angles of $125^\circ$ (left) and $90^\circ$ (right). The standard and compound lenses have comparable yields at $125^\circ$, but the standard lens clearly loses a large amount of photons in the perpendicular case.}
+	\caption[Comparison of the photon yield per track for a DIRC bar with no focusing (green), a standard air gap lens (red), and a 2-layer compound lens (blue) for polar angles of $125^\circ$ (left) and $90^\circ$ (right) \cite{GregThesis}. The standard and compound lenses have comparable yields at $125^\circ$, but the standard lens clearly loses a large amount of photons in the perpendicular case.]{Comparison of the photon yield per track for a DIRC bar with no focusing (green), a standard air gap lens (red), and a 2-layer compound lens (blue) for polar angles of $125^\circ$ (left) and $90^\circ$ (right). The standard and compound lenses have comparable yields at $125^\circ$, but the standard lens clearly loses a large amount of photons in the perpendicular case.}
 	\label{fig:lens_photon_yield}
 \end{figure}
 
-The 2-layer lens design solves the problem of photon yield loss from the air gap lens at steeper angles and will allow the PANDA Barrel DIRC to reach their desired separation power. However, as discussed earlier, this separation power of 3 s.d. at 4 GeV/c is unacceptable for the requirements of a DIRC at EIC. The key to solving this problem was in designing a special 3-layer spherical compound lens. The advantage of this 3-layer lens design over a traditional optical lens or the 2-layer lens is the shape of the focal plane. According to simulation the focal plane of the 3-layer lens is relatively flat, as shown in Figure \ref{fig:lens_focal_plane}. Photos of a prototype lens tested at CERN in 2015 and an exploded view of the lens layers and dimensions are shown in Figure \ref{fig:3CS_schematic}. It contains a layer of NLaK33 sandwiched between two layers of fused silica. The two radii of the middle layer were optimized to remove aberrations present in standard lenses by first defocusing and then refocusing transmitted photons to create a flat focal plane, matching the geometry of the prism expansion volume. Five prototype lenses were produced for evaluating the performance of the lens design in a test beam, for measuring the radiation hardness of the NLaK33 material, and for evaluating the focal plane. These tests will be discussed in greater detail in Chapters \ref{ch:components} and \ref{ch:analysis}.
+The 2-layer lens design solves the problem of photon yield loss from the air gap lens at steeper angles and will allow the PANDA Barrel DIRC to reach their desired separation power. However, as discussed earlier, this separation power of 3 s.d. at 4 GeV/c is insufficient for the requirements of a DIRC at EIC. The key to solving this problem was in designing a special 3-layer spherical compound lens. The advantage of this 3-layer lens design over a traditional optical lens or the 2-layer lens is the shape of the focal plane. According to simulation the focal plane of the 3-layer lens is relatively flat, as shown in Figure \ref{fig:lens_focal_plane}. Photos of a prototype lens tested at CERN in 2015 and an exploded view of the lens layers and dimensions are shown in Figure \ref{fig:3CS_schematic}. It contains a layer of NLaK33 sandwiched between two layers of fused silica. The two radii of the middle layer were optimized to remove aberrations present in standard lenses by first defocusing and then refocusing transmitted photons to create a flat focal plane, matching the geometry of the prism expansion volume. Five prototype lenses were produced for evaluating the performance of the lens design in a test beam, for measuring the radiation hardness of the NLaK33 material, and for evaluating the focal plane. These tests will be discussed in greater detail in Chapters \ref{ch:components} and \ref{ch:analysis}.
 
 \begin{figure}[!htb]
 	\centering
@@ -69,12 +69,13 @@ The 2-layer lens design solves the problem of photon yield loss from the air gap
 %----------------------------------------------------------------------
 %	SIMULATION SECTION
 %----------------------------------------------------------------------
+\clearpage
 \section{Simulated Performance}
 
 \subsection{Geometric Reconstruction}
-Reconstruction of the Cherenkov angle for kaons and pions at 6 GeV/c with a $125^{\circ}$ polar angle using the design parameters above are shown in Figure \ref{fig:EIC_track_res}. The signal is very clean and the mean and SPR of the distribution are easily extracted. Figure \ref{fig:EIC_performance}a shows the photon yield, or multiplicity, per polar angle for 50 6 GeV/c pions, and Figure \ref{fig:EIC_performance}b shows the SPR per polar angle for 50 6 GeV/c kaons (red) and pions (blue). The per track Cherenkov angle resolution, given by (\ref{eq:performance}), is shown in Figure \ref{fig:EIC_track_res} for assumptions of 0.25 mrad (black), 0.5 mrad (red), 0.75 (green), and 1 mrad (blue) correlated term contributions with 6 GeV/c pions \footnote{NB: the per track Cherenkov angle resolution will be slightly different for each particle species, however because the SPR for each particle is almost identical showing only the results for pions is sufficient.}.  The simulations were done assuming that the sides of the 3-layer lens focusing optic were not reflective, therefore reducing the photon yield and making the performance slightly worse.
+Simulated reconstructions of the Cherenkov angle for kaons and pions at 6 GeV/c with a $125^{\circ}$ polar angle using the design parameters above are shown in Figure \ref{fig:EIC_reconstruction}. The signal is very clean and the mean and SPR of the distribution are easily extracted. Figure \ref{fig:EIC_performance}a shows the photon yield, or multiplicity, per polar angle for fifty 6 GeV/c pions, and Figure \ref{fig:EIC_performance}b shows the Single Photon Resolution (SPR) \footnote{Three points are normally required to define a circle and thus extract a radius. However, with a perfect RICH detector it is sufficient to know only a single point on the ring as one also knows the center of the circle (i.e. the particle track). Here, too, it is sensible to talk about the resolution of single photon events as the center of the ``circle" for a DIRC (i.e. the polar angle) is known from tracking.} per polar angle for fifty 6 GeV/c kaons (red) and pions (blue). The per track Cherenkov angle resolution, given by Eq. (\ref{eq:performance}), is shown in Figure \ref{fig:EIC_track_res} for assumptions of 0.25 mrad (black), 0.5 mrad (red), 0.75 (green), and 1 mrad (blue) correlated term contributions with 6 GeV/c pions \footnote{NB: the per track Cherenkov angle resolution will be slightly different for each particle species, however, because the SPR for each particle is almost identical, showing only the results for pions is sufficient.}.  The simulations were done assuming that the sides of the 3-layer lens focusing optic were not reflective, therefore reducing the photon yield and making the performance slightly worse.
 
-The SPR of the reconstructed Cherenkov angle was found to scale roughly linearly with the size of the pixel size of the MCP-PMTs, as shown in Figure \ref{fig:EIC_sensor_scaling}. Clearly the 4 mm pixel size, though not ideal, is comparable in performance to the 2 mm pixel size. This is an important factor to consider in the final design due to the rapid increase of the cost per pixel of MCP-PMTs as the size of the pixels decreases.
+The SPR of the reconstructed Cherenkov angle was found to scale with the pixel size of the MCP-PMTs roughly as $SPR \approx SPR_{0}\sqrt{1+size^2/a^2}$, as shown in Figure \ref{fig:EIC_sensor_scaling}. Clearly the 4 mm pixel size, though not ideal, is comparable in performance to the 2 mm pixel size. This is an important factor to consider in the final design due to the increase of the cost per pixel of MCP-PMTs and with the electronics readout per channel as the size of the pixels decreases.
 
 
 \begin{figure}[!htb]
@@ -88,7 +89,7 @@ The SPR of the reconstructed Cherenkov angle was found to scale roughly linearly
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{EIC_performance.pdf}
-	\caption{The multiplicity (a) and SPR (b) performance per polar angle of the EIC DIRC baseline design. Plots were generated using 50 particles (kaons in red, pions in blue) at 6 GeV/c per polar angle.}
+	\caption{The multiplicity (a) and SPR (b) performance per polar angle of the EIC DIRC baseline design. Plots were generated using fifty particles (kaons in red, pions in blue) at 6 GeV/c per polar angle.}
 	\label{fig:EIC_performance}
 \end{figure}
 
@@ -101,8 +102,8 @@ The SPR of the reconstructed Cherenkov angle was found to scale roughly linearly
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics[scale=0.6]{EIC_SPR_vs_sensorDim.png}
-	\caption{Roughly linear scaling of the SPR as a function of the MCP-PMT pixel size for four polar angles.}
+	\includegraphics[width=\textwidth]{EIC_SPR_vs_sensorDim3.png}
+	\caption{Scaling of the SPR as a function of the MCP-PMT pixel dimension for $30^\circ$ (black), $70^\circ$ (red), $110^\circ$ (green), and $150^\circ$ (blue) polar angle along with an example fit (dashed purple) showing that the dependence of the performance scales roughly as $\sqrt{1+\frac{pixel^2}{a^2}}$}
 	\label{fig:EIC_sensor_scaling}
 \end{figure}
 
