@@ -28,7 +28,7 @@ where $\omega_0$ is the central value of the considered frequency range. Because
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[scale=1]{Cherenkov_cone.pdf}
-	\caption{Illustration of the Cherenkov cone.}
+	\caption[Illustration of the Cherenkov cone.]{Illustration of the Cherenkov cone \cite{ParticleDetectionHandbook}.}
 	\label{fig:cherenkovcone}
 \end{figure}
 
@@ -52,7 +52,7 @@ Threshold counters are Cherenkov detectors used for particle identification (PID
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{angle_seperation_enhance.pdf}
-	\caption{Particle momentum [GeV/c] versus Cherenkov angle [mrad] for different particle species in fused silica ($n \approx 1.473$). While the full range (left) makes it seem as if separation between heavier species becomes more and more challenging, zooming in (right) shows that it is indeed to possible separate protons, kaons, and pions even at higher particle momentum.}
+	\caption[Particle momentum (in GeV/c) versus Cherenkov angle (in mrad) for different particle species in fused silica ($n \approx 1.473$).]{Particle momentum (in GeV/c) versus Cherenkov angle (in mrad) for different particle species in fused silica ($n \approx 1.473$). While the full range (left) makes it seem as if separation between heavier species becomes more and more challenging, zooming in (right) shows that it is indeed to possible separate protons, kaons, and pions even at higher particle momentum.}
 	\label{fig:angleseperation}
 \end{figure}
 
@@ -74,7 +74,7 @@ A basic RICH system is shown in Figure \ref{fig:rich_basics}. A volume of radiat
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{RICH_rings.pdf}
-	\caption{Basic concept of a proximity focusing Ring Imaging Cherenkov (RICH) detector (a), and an example of how they can be used to do PID based on particle mass (b).}
+	\caption[Basic concept of a proximity focusing Ring Imaging Cherenkov (RICH) detector (a), and an example of how they can be used to do PID based on particle mass (b).]{Basic concept of a proximity focusing Ring Imaging Cherenkov (RICH) detector (a), and an example of how they can be used to do PID based on particle mass (b) \cite{GregThesis}.}
 	\label{fig:rich_basics}
 \end{figure}
 
@@ -88,7 +88,7 @@ DIRC detectors work much the same way as a RICH in that they collect Cherenkov p
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[scale=0.7]{DIRC_components.pdf}
-	\caption{The basic components of a DIRC detector: a solid radiator, typically fused silica (green); a mirror to redirect backward-going photons (pink); optional focusing optics (purple); an expansion volume to allow photons to separate in space (cyan); and a detector surface (brown) to record the position and arrival time of Cherenkov photons (blue).}
+	\caption[The basic components of a DIRC detector.]{The basic components of a DIRC detector. A solid radiator, typically fused silica (green); a mirror to redirect backward-going photons (pink); optional focusing optics (purple); an expansion volume to allow photons to separate in space (cyan); and a detector surface (brown) to record the position and arrival time of Cherenkov photons (blue).}
 	\label{fig:dircbasics}
 \end{figure}
 
@@ -116,7 +116,7 @@ As of the writing of this thesis the only DIRC detector used in a full experimen
 	\raisebox{-1.0\height}{\includegraphics[width=0.5\textwidth]{BaBar_SPR.png}}%
 	b)%
 	\raisebox{-1.0\height}{\includegraphics[width=0.5\textwidth]{BaBar_NPH.png}}
-	\caption[Performance of the BaBar DIRC for $e^{+}e^{-} \rightarrow \mu^{+}\mu^{-}$ events. a) shows the difference between the measured and expected Cherenkov angle (dots) and a Gaussian fit to the data with a 2.5 mrad width (line). b) is the average number of detected photons vs. track polar angle for data (dots) and GEANT4 simulation (line).]{Performance of the BaBar DIRC for $e^{+}e^{-} \rightarrow \mu^{+}\mu^{-}$ events \cite{BaBarDIRC}. a) shows the difference between the measured and expected Cherenkov angle (dots) and a Gaussian fit to the data with a 2.5 mrad width (line). b) is the average number of detected photons vs. track polar angle for data (dots) and GEANT4 \cite{GEANT4} simulation (line).}
+	\caption[Performance of the BaBar DIRC for $e^{+}e^{-} \rightarrow \mu^{+}\mu^{-}$ events.]{Performance of the BaBar DIRC for $e^{+}e^{-} \rightarrow \mu^{+}\mu^{-}$ events \cite{BaBarDIRC}. a) shows the difference between the measured and expected Cherenkov angle (dots) and a Gaussian fit to the data with a 2.5 mrad width (line). b) is the average number of detected photons vs. track polar angle for data (dots) and GEANT4 \cite{GEANT4} simulation (line).}
 	\label{fig:babarperformance}
 \end{figure}
 
@@ -126,7 +126,7 @@ The BaBar DIRC has since inspired many other experiments/facilities, including t
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{dirc_evolution.pdf}
-	\caption{Evolution of the DIRC concept. From top left to bottom right: BaBar Barrel DIRC, Focusing DIRC, PANDA Barrel DIRC, PANDA Disc DIRC, Belle II Time of Propagation DIRC, LHCb TORCH DIRC, GlueX DIRC, EIC DIRC}
+	\caption[Evolution of the DIRC concept.]{Evolution of the DIRC concept. From top left to bottom right: BaBar Barrel DIRC \cite{BaBarDIRC}, Focusing DIRC \cite{FDIRC2}, PANDA Barrel DIRC \cite{PANDA_barrel}, PANDA Disc DIRC \cite{PANDA_disc}, Belle II Time of Propagation DIRC \cite{Belle2_TOP}, LHCb TORCH DIRC \cite{TORCH}, GlueX DIRC \cite{GlueX}, and the EIC DIRC.}
 	\label{fig:dirc_evolution}
 \end{figure}
 
@@ -141,7 +141,7 @@ Two approaches were used in the analysis presented in this thesis for particle s
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.43]{ring_comparison2.pdf}
-	\caption{Various detector geometries (left) and the resulting simulated hit patterns (right) from 1000 identical particles. A typical RICH detector (a), produces a very nice ring pattern. A DIRC detector with a sufficiently large expansion volume using a thin radiator bar (b) produces two ring segments. A DIRC with a radially compact expansion volume (c) will reflect one of the ring segments so that it will stack side by side. Finally, a DIRC detector with a compact expansion volume both radially and transversely (i.e. into and out of the page) (d) will cause the ring segments to fold in on themselves, making a fish-like pattern. The DIRC patterns are viewed from the back of the detector plane and rotated $90^{\circ}$ clockwise relative to the corresponding geometry.}
+	\caption[Various detector geometries (left) and the resulting simulated hit patterns (right) from 1000 identical particles.]{Various detector geometries (left) and the resulting simulated hit patterns (right) from 1000 identical particles. A typical RICH detector (a), produces a very nice ring pattern. A DIRC detector with a sufficiently large expansion volume using a thin radiator bar (b) produces two ring segments. A DIRC with a radially compact expansion volume (c) will reflect one of the ring segments so that it will stack side by side. Finally, a DIRC detector with a compact expansion volume both radially and transversely (i.e. into and out of the page) (d) will cause the ring segments to fold in on themselves, making a fish-like pattern. The DIRC patterns are viewed from the back of the detector plane and rotated $90^{\circ}$ clockwise relative to the corresponding geometry.}
 	\label{fig:ring_comparison2}
 \end{figure}
 
@@ -149,7 +149,7 @@ Two approaches were used in the analysis presented in this thesis for particle s
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{prism_reflections.pdf}
-	\caption{For a prism-shaped expansion volume (a) different segments of the hit pattern correspond to different paths taken (b). Paths with multiple reflections inside the prism (e.g. bottom-left) have been excluded for simplicity.}
+	\caption[For a prism-shaped expansion volume (a), different segments of the hit pattern correspond to different paths taken (b).]{For a prism-shaped expansion volume (a) \cite{GregThesis}, different segments of the hit pattern correspond to different paths taken (b). Paths with multiple reflections inside the prism (e.g. bottom-left) have been excluded for simplicity.}
 	\label{fig:prism_reflections}
 \end{figure}
 
@@ -163,7 +163,7 @@ The emission angle between a single photon and the particle track can be reconst
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.65\textwidth]{k_vector.pdf}
-	\caption{Schematic of the geometric reconstruction concept, with a photon (purple) being emitted from the particle track. The direction of the k-vector can be used to determine the original direction vector, $\vec{k}_{org}$, of the photon and is used for the reconstruction of $\thetaC$.}
+	\caption[Schematic of the geometric reconstruction concept, with a photon (purple) being emitted from the particle track.]{Schematic of the geometric reconstruction concept, with a photon (purple) being emitted from the particle track. The direction of the k-vector can be used to determine the original direction vector, $\vec{k}_{org}$, of the photon and is used for the reconstruction of $\thetaC$ \cite{GregThesis}.}
 	\label{fig:k_vector}
 \end{figure}
 
@@ -174,7 +174,7 @@ Unfortunately, the direction of the k-vector as reconstructed by the pixel does 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.7\textwidth]{bar_ambiguities.pdf}
-	\caption{2D illustration showing all possible combinations of k-vector directions off of the particle track. Not shown are the additional 4 components where $k_x \rightarrow -k_x$.}
+	\caption[2D illustration showing all possible combinations of k-vector directions off of the particle track.]{2D illustration showing all possible combinations of k-vector directions off of the particle track \cite{GregThesis}. Not shown are the additional 4 components where $k_x \rightarrow -k_x$.}
 	\label{fig:bar_ambiguities}
 \end{figure}
 
@@ -185,7 +185,7 @@ The number of ambiguous paths that are reconstructed can be reduced by averaging
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.75\textwidth]{lut_averaging.pdf}
-	\caption{2D example of averaging LUT entries to reduce prism ambiguity reconstructions. The two photons reflecting off of the bottom prism face (blue) have been averaged to the one black photon. The two photons reflecting off of the top prism face (orange) have been average to the red photon. In this simplified example the number of entries in the LUT have been reduced by half. Angles have been exaggerated.}
+	\caption[A 2D example of averaging LUT entries to reduce prism ambiguity reconstructions.]{A 2D example of averaging LUT entries to reduce prism ambiguity reconstructions. The two photons reflecting off of the bottom prism face (blue) have been averaged to the one black photon. The two photons reflecting off of the top prism face (orange) have been average to the red photon. In this simplified example the number of entries in the LUT have been reduced by half. Angles have been exaggerated.}
 	\label{fig:lut_averaging}
 \end{figure}
 
@@ -194,14 +194,14 @@ The Cherenkov angle is not, however, only reconstructed for one photon, but for 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{prism_ambiguities.pdf}
-	\caption{Illustration of possible ambiguities in the $\thetaC$ reconstruction coming from possible paths in a prism-shaped expansion volume. Each face is labeled in a) along with an example of a direct path, while b) shows 3 possible paths that lead from the bar to a certain pixel: 1 top reflection (gold), 1 bottom reflection (blue), and 1 direct path (gray).}
+	\caption[Illustration of possible ambiguities in the $\thetaC$ reconstruction coming from possible paths in a prism-shaped expansion volume.]{Illustration of possible ambiguities in the $\thetaC$ reconstruction coming from possible paths in a prism-shaped expansion volume \cite{GregThesis}. Each face is labeled in a) along with an example of a direct path, while b) shows 3 possible paths that lead from the bar to a certain pixel: 1 top reflection (gold), 1 bottom reflection (blue), and 1 direct path (gray).}
 	\label{fig:prism_ambiguities}
 \end{figure}
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{combinatorial_background.pdf}
-	\caption{Simulated reconstructed Cherenkov angle per photon from a 7 GeV/c particle with a polar angle of $125^{\circ}$ for: a) one photon from a proton with only bar ambiguities, b) all photons from one proton with only bar ambiguities, c) all photons from 1000 identical protons with only bar ambiguities, d) all photons from 1000 identical protons with both bar and prism ambiguities, e) same as d) but with constraints on the photon angle with the bar surface being greater than the critical angle for total internal reflections and neglecting y direction flips due to zero beam divergence, and f) a zoom showing a buildup around the calculated value of 816 mrad along with a combinatorial background.}
+	\caption[Simulated reconstructed Cherenkov angle per photon from a 7 GeV/c particle with a polar angle of $125^{\circ}$.]{Simulated reconstructed Cherenkov angle per photon from a 7 GeV/c particle with a polar angle of $125^{\circ}$. a) one photon from a proton with only bar ambiguities. b) all photons from one proton with only bar ambiguities. c) all photons from 1000 identical protons with only bar ambiguities. d) all photons from 1000 identical protons with both bar and prism ambiguities. e) same as d) but with constraints on the photon angle with the bar surface being greater than the critical angle for total internal reflections and neglecting y direction flips due to zero beam divergence. f) a zoom showing a buildup around the calculated value of 816 mrad along with a combinatorial background.}
 	\label{fig:combinatorial_background}
 \end{figure}
 
@@ -213,6 +213,6 @@ To reconstruct a data or simulation file using these PDFs the photon arrival tim
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{time-based_reconstruction.png}
-	\caption{An example of time-based reconstruction for a plate radiator with a prism expansion volume for kaons (dashed) and pions (solid red). Photon arrival times for one MCP-PMT pixel are shown in a), and b) is the log-likelihood difference for kaon and pion hypotheses for multiple 3.5 GeV/c particles at $22^\circ$ polar angle \cite{PANDA_barrel}.}
+	\caption[An example of time-based reconstruction for a plate radiator with a prism expansion volume for kaons (dashed) and pions (solid red).]{An example of time-based reconstruction for a plate radiator with a prism expansion volume for kaons (dashed) and pions (solid red). Photon arrival times for one MCP-PMT pixel are shown in a), and b) is the log-likelihood difference for kaon and pion hypotheses for multiple 3.5 GeV/c particles at $22^\circ$ polar angle \cite{PANDA_barrel}.}
 	\label{fig:time-based_reco}
 \end{figure}

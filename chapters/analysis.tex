@@ -16,7 +16,7 @@ The PANDA prototype was situated in the CERN Proton Synchrotron (PS) T9 experime
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{testbeam_2015.pdf}
-	\caption{CAD drawing of the T9 experimental hall with the PANDA DIRC prototype setup. Two time-of-flight (TOF) detectors were separated by 29 m and used for proton/pion separation. Two trigger systems were used for the start and stop times of the readout electronics.}
+	\caption[CAD drawing of the T9 experimental hall with the PANDA DIRC prototype setup.]{CAD drawing of the T9 experimental hall with the PANDA DIRC prototype setup \cite{PANDA_barrel}. Two time-of-flight (TOF) detectors were separated by 29 m and used for proton/pion separation. Two trigger systems were used for the start and stop times of the readout electronics.}
 	\label{fig:testbeam_2015}
 \end{figure}
 
@@ -25,14 +25,14 @@ A CAD drawing of the experimental setup in the T9 hall can be seen in Figure \re
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.85\textwidth]{TOF_PID.png}
-	\caption{Time-of-flight (TOF) particle tagging for 3, 5, 7, and 10 GeV/c beam momentum with a 29~m separation between TOF stations (MCP2 and SciTil1) each with between 50-80~ps time resolution. As a side note: it is immediately obvious that a simple TOF system as a solution to PID in the limited space of the barrel region of an EIC is infeasible as even at 5 GeV/c momentum the signal between pions and kaons are difficult to separate, and at 10 GeV/c it is neigh-impossible even with a 29~m separation between stations. }
+	\caption[Time-of-flight (TOF) particle tagging for 3, 5, 7, and 10 GeV/c beam momentum with a 29~m separation between TOF stations (MCP2 and SciTil1) each with between 50-80~ps time resolution.]{Time-of-flight (TOF) particle tagging for 3, 5, 7, and 10 GeV/c beam momentum with a 29~m separation between TOF stations (MCP2 and SciTil1) each with between 50-80~ps time resolution. As a side note: it is immediately obvious that a simple TOF system as a solution to PID in the limited space of the barrel region of an EIC is infeasible as even at 5 GeV/c momentum the signal between pions and kaons are difficult to separate, and at 10 GeV/c it is neigh-impossible even with a 29~m separation between stations. }
 	\label{fig:TOF_PID}
 \end{figure}
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.6\textwidth]{PANDA_prototype2.pdf}
-	\caption{CAD drawing of the 2015 PANDA DIRC prototype setup. The radiator (1), optics (2), expansion volume (3), $3\times5$ array of MCP-PMTs (4), readout (5), and TRB units (6) are supported by an aluminum frame that can move in two directions and rotate, as indicated by the red arrows.}
+	\caption[CAD drawing of the 2015 PANDA DIRC prototype setup.]{CAD drawing of the 2015 PANDA DIRC prototype setup \cite{PrototypeInfo}. The radiator (1), optics (2), expansion volume (3), $3\times5$ array of MCP-PMTs (4), readout (5), and TRB units (6) are supported by an aluminum frame that can move in two directions and rotate, as indicated by the red arrows.}
 	\label{fig:PANDA_prototype}
 \end{figure}
 
@@ -41,14 +41,14 @@ Figure \ref{fig:PANDA_prototype} shows a CAD drawing of the prototype setup. The
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.8\textwidth]{testbeam_alignment.JPG}
-	\caption{Plate radiator being adjusted by micrometer screws using the Bosch Dual Plane Laser as a guide. When the light reflected off of the radiator lined up with the incoming beam from the laser on the white paper in both the horizontal and vertical directions the radiator was aligned with the beam line.}
+	\caption[Plate radiator being adjusted by micrometer screws using the Bosch Dual Plane Laser as a guide.]{Plate radiator being adjusted by micrometer screws using the Bosch Dual Plane Laser as a guide. When the light reflected off of the radiator lined up with the incoming beam from the laser on the white paper in both the horizontal and vertical directions the radiator was aligned with the beam line. Photo taken by, and used with permission from Dr. Grzegorz Kalicy.}
 	\label{fig:testbeam_alignment}
 \end{figure}
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.7\textwidth]{30-deg-prism.pdf}
-	\caption{Picture of the $30^{\circ}$ prism expansion volume used in the 2015 test beam.}
+	\caption[Picture of the $30^{\circ}$ prism expansion volume used in the 2015 test beam.]{Picture of the $30^{\circ}$ prism expansion volume used in the 2015 test beam \cite{PrototypeInfo}.}
 	\label{fig:prototype_prism}
 \end{figure}
 
@@ -69,7 +69,7 @@ The accurate recreation of a DIRC detector in simulation is crucial for data ana
 	\centering
 	\includegraphics[width=\textwidth]{MCP_QE_2015.png}
 	\includegraphics[width=\textwidth]{Photonis_QE.png}
-	\caption{Channel-by-channel map of the relative quantum efficiency (QE) of each $6\times6\unit{mm}^2$ pixel of each MCP-PMT (64 pixels per MCP-PMT) used in the simulation of the 2015 test beam prototype (top). Absolute QE values in the simulation are the product of the channel-by-channel values with the wavelength dependent QE of a Planacon XP85012 MCP-PMT (bottom).}
+	\caption[The absolute and relative quantum efficiency of each MCP-PMT pixel.]{The absolute and relative quantum efficiency of each MCP-PMT pixel. Channel-by-channel map of the relative quantum efficiency (QE) of each $6\times6\unit{mm}^2$ pixel of each MCP-PMT (64 pixels per MCP-PMT) used in the simulation of the 2015 test beam prototype (top). Absolute QE values in the simulation are the product of the channel-by-channel values with the wavelength dependent QE of a Planacon XP85012 MCP-PMT (bottom).}
 	\label{fig:quantum_efficiency}
 \end{figure}
 
@@ -78,7 +78,7 @@ Also included in the simulation is the quantum efficiency (QE) of the MCP-PMTs. 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.7\textwidth]{proton_track_example.pdf}
-	\caption{a) Shows a visualization of the GEANT4 simulation of a single 7 GeV/c proton (red) traveling through the 2015 prototype with a bar radiator at a polar angle of $125^{\circ}$, b) is the accumulated hit pattern of 10,000 identical protons from simulation, and c) is the accumulated hit pattern of 10,000 tagged proton tracks from test beam data at 7 GeV/c beam and $125^{\circ}$ polar angle. The roughly half pixel discrepancy in the position of the two hit patterns can be explained by the uncertainty in the absolute value of the polar angle during the test beam measurements.}
+	\caption[Comparison of prototype data and GEANT4 simulation.]{Comparison of prototype data and GEANT4 simulation. a) Shows a visualization of the GEANT4 simulation of a single 7 GeV/c proton (red) traveling through the 2015 prototype with a bar radiator at a polar angle of $125^{\circ}$, b) is the accumulated hit pattern of 10,000 identical protons from simulation, and c) is the accumulated hit pattern of 10,000 tagged proton tracks from test beam data at 7 GeV/c beam and $125^{\circ}$ polar angle. The roughly half pixel discrepancy in the position of the two hit patterns can be explained by the uncertainty in the absolute value of the polar angle during the test beam measurements.}
 	\label{fig:proton_track_example}
 \end{figure}
 
@@ -130,7 +130,7 @@ As mentioned previously the timing difference between the two TOF stations allow
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{TOF_timing.pdf}
-	\caption{Time difference between the two TOF stations for beam momenta of 5 GeV/c (top) and 7 GeV/c (bottom). The peaks were fitted and a $\pm2\sigma$ selection window was taken (dashed lines).}
+	\caption[Time difference between the two TOF stations for beam momenta of 5 GeV/c (top) and 7 GeV/c (bottom).]{Time difference between the two TOF stations for beam momenta of 5 GeV/c (top) and 7 GeV/c (bottom). The peaks were fitted and a $\pm2\sigma$ selection window was taken (dashed lines).}
 	\label{fig:tof_timing}
 \end{figure}
 
@@ -154,7 +154,7 @@ Comparing the difference between the calculated expected arrival time and the ac
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{time_difference.pdf}
-	\caption{a) Illustration showing how total bar path length ($Z$) is calculated for the expected arrival time of photons based on distances from the pivot point (cyan circle) and particle beam ($D_1$),the pivot point to the radiator ($D_2$), nominal perpendicular distance between the beam and the end of the bar ($z_0$), and the polar angle ($\alpha$). Note that in the case of b) Example time difference distribution of experimental data (black), full simulation (red), and simulation including only correct prism paths from the LUT (blue) for $125^\circ$ polar angle. The dashed lines indicate the $\pm$1~ns cut taken during analysis. }
+	\caption[A visualization of the timing difference used for data analysis.]{A visualization of the timing difference used for data analysis. a) Illustration showing how total bar path length ($Z$) is calculated for the expected arrival time of photons based on distances from the pivot point (cyan circle) and particle beam ($D_1$),the pivot point to the radiator ($D_2$), nominal perpendicular distance between the beam and the end of the bar ($z_0$), and the polar angle ($\alpha$). Note that in the case of b) Example time difference distribution of experimental data (black), full simulation (red), and simulation including only correct prism paths from the LUT (blue) for $125^\circ$ polar angle. The dashed lines indicate the $\pm$1~ns cut taken during analysis. }
 	\label{fig:time_difference}
 \end{figure}
 
@@ -170,7 +170,7 @@ The solution was to modify the LUT to reconstruct the position of the photon not
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{charge_sharing.pdf}
-	\caption{a) A zoomed in view of a single MCP-PMT showing an example hit pattern from a single particle track. The 3 isolated pixels (red) have no neighboring hits. The 3 clustered hits (green), however, are adjacent to other firing pixels and thus it is hard to determine with timing alone if these are the result of a single photon from the bottom right pixel that resulted in charge sharing, 3 independent photons hitting all 3 pixels, or some combination of 2 photons hitting 2 of the pixels that resulted in charge sharing. To compensate for this uncertainty each pixel is subdivided, as in (b), into 9 regions such that the LUT will reconstruct the photon angle from different areas of the pixel. For the case of (a) the top pixel in the cluster would be reconstructed from point 7, the bottom left pixel from point 5, and the bottom right pixel from point 2, while the 3 isolated pixels would all be reconstructed from point 0.}
+	\caption[A visualization of the charge sharing correction used during data analysis.]{A visualization of the charge sharing correction used during data analysis. a) A zoomed in view of a single MCP-PMT showing an example hit pattern from a single particle track. The 3 isolated pixels (red) have no neighboring hits. The 3 clustered hits (green), however, are adjacent to other firing pixels and thus it is hard to determine with timing alone if these are the result of a single photon from the bottom right pixel that resulted in charge sharing, 3 independent photons hitting all 3 pixels, or some combination of 2 photons hitting 2 of the pixels that resulted in charge sharing. To compensate for this uncertainty each pixel is subdivided, as in (b), into 9 regions such that the LUT will reconstruct the photon angle from different areas of the pixel. For the case of (a) the top pixel in the cluster would be reconstructed from point 7, the bottom left pixel from point 5, and the bottom right pixel from point 2, while the 3 isolated pixels would all be reconstructed from point 0.}
 	\label{fig:charge_sharing}
 \end{figure}
 
@@ -178,7 +178,7 @@ The solution was to modify the LUT to reconstruct the position of the photon not
 	\centering
 	\includegraphics[width=\textwidth]{chargeshare_90_sim.png}
 	\includegraphics[width=\textwidth]{chargeshare_90_data.png}
-	\caption{Reconstructed Cherenkov angle of 7 GeV/c protons for simulation (top) and prototype data (bottom) for $90^\circ$ polar angle using the standard LUT (blue) and the charge-sharing-corrected LUT (red). The simulation is largely unaffected, while in the data the peak has been narrowed and the background reduced.}
+	\caption[Reconstructed Cherenkov angle of 7 GeV/c protons for simulation (top) and prototype data (bottom) for $90^\circ$ polar angle using the standard LUT (blue) and the charge-sharing-corrected LUT (red).]{Reconstructed Cherenkov angle of 7 GeV/c protons for simulation (top) and prototype data (bottom) for $90^\circ$ polar angle using the standard LUT (blue) and the charge-sharing-corrected LUT (red). The simulation is largely unaffected, while in the data the peak has been narrowed and the background reduced.}
 	\label{fig:charge_sharing_reco}
 \end{figure}
 
@@ -189,7 +189,7 @@ The fitted mean of the reconstructed Cherenkov angle from geometric reconstructi
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{mcp_shift_hist.png}
-	\caption{Reconstructed $\thetaC$ at $90^\circ$ polar angle before (red) and after (blue) per-MCP-PMT corrections. The uncorrected distribution has an SPR (the $\sigma$ of the gaussian) of 10.9~mrad and a mean $\thetaC$ of 823.1~mrad, or 6.3~mrad away from the true value of 816.8~mrad for a 7~GeV/c proton. The corrected distribution has a steady SPR of 10.9~mrad and a mean of 813.4~mrad, which is only 3.4~mrad away from the true value.}
+	\caption[Reconstructed $\thetaC$ at $90^\circ$ polar angle before (red) and after (blue) per-MCP-PMT corrections.]{Reconstructed $\thetaC$ at $90^\circ$ polar angle before (red) and after (blue) per-MCP-PMT corrections. The uncorrected distribution has an SPR (the $\sigma$ of the gaussian) of 10.9~mrad and a mean $\thetaC$ of 823.1~mrad, or 6.3~mrad away from the true value of 816.8~mrad for a 7~GeV/c proton. The corrected distribution has a steady SPR of 10.9~mrad and a mean of 813.4~mrad, which is only 3.4~mrad away from the true value.}
 	\label{fig:mcp_corr_hist}
 \end{figure}
 
@@ -197,7 +197,7 @@ The fitted mean of the reconstructed Cherenkov angle from geometric reconstructi
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{mcp_corr_polar.pdf}
-	\caption{Top: Reconstructed mean $\thetaC$ before applying per-MCP-PMT corrections for simulation (blue) and prototype data (red) for 7 GeV/c protons. The dashed line indicates the true Cherenkov angle for a 7 GeV/c proton of 816 mrad. Bottom: Reconstructed $\thetaC$ after applying corrections.}
+	\caption[The reconstructed mean $\thetaC$ from the prototype data and simulation.]{The reconstructed mean $\thetaC$ from the PANDA prototype and simulation. Top: Reconstructed mean $\thetaC$ before applying per-MCP-PMT corrections for simulation (blue) and prototype data (red) for 7 GeV/c protons. The dashed line indicates the true Cherenkov angle for a 7 GeV/c proton of 816 mrad. Bottom: Reconstructed $\thetaC$ after applying corrections.}
 	\label{fig:mcp_corr_polar}
 \end{figure}
 
@@ -208,7 +208,7 @@ Because the majority of the background signal for the reconstructed Cherenkov an
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{background_subtraction.pdf}
-	\caption{(a) The full reconstructed Cherenkov angle (blue line), reconstructed angle with only incorrect prism path ambiguities (black circles), and the reconstructed angle assuming only true prism paths (red histogram) for $125^\circ$ polar angle protons from simulation. (b) Beam data (blue line) with path ambiguity background from simulation (black circles, same as (a)). The red histogram is the difference between blue and black.}
+	\caption[An example of the background subtraction technique used during data analysis.]{An example of the background subtraction technique used during data analysis. a) The full reconstructed Cherenkov angle (blue line), reconstructed angle with only incorrect prism path ambiguities (black circles), and the reconstructed angle assuming only true prism paths (red histogram) for $125^\circ$ polar angle protons from simulation. b) Beam data (blue line) with path ambiguity background from simulation (black circles, same as (a)). The red histogram is the difference between blue and black.}
 	\label{fig:background_sub}
 \end{figure}
 
@@ -261,28 +261,28 @@ Figure \ref{fig:2015_LUT_efficiency} shows the PID and misidentification (MisID)
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{2015_THC_nocorr.pdf}
-	\caption{Reconstructed mean $\thetaC$ with no background subtraction and no per-MCP-PMT correction from GEANT4 simulation (blue) and study 151 of the 2015 CERN test beam data (red) for protons (filled circles) and pions (open circles). The solid and dashed lines indicate the true Cherenkov angle for 7 GeV/c pions and protons respectively.}
+	\caption[Reconstructed mean $\thetaC$ with no background subtraction and no per-MCP-PMT correction from GEANT4 simulation (blue) and study 151 of the 2015 CERN test beam data (red) for protons (filled circles) and pions (open circles).]{Reconstructed mean $\thetaC$ with no background subtraction and no per-MCP-PMT correction from GEANT4 simulation (blue) and study 151 of the 2015 CERN test beam data (red) for protons (filled circles) and pions (open circles). The solid and dashed lines indicate the true Cherenkov angle for 7 GeV/c pions and protons respectively.}
 	\label{fig:2015_THC_nocorr}
 \end{figure}
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{2015_THC_bg_nocorr.pdf}
-	\caption{Reconstructed mean $\thetaC$ with simulated background subtraction but no per-MCP-PMT correction from GEANT4 simulation (blue) and study 151 of the 2015 CERN test beam data (red) for protons (filled circles) and pions (open circles). The solid and dashed lines indicate the true Cherenkov angle for 7 GeV/c pions and protons respectively.}
+	\caption[Reconstructed mean $\thetaC$ with simulated background subtraction but no per-MCP-PMT correction from GEANT4 simulation (blue) and study 151 of the 2015 CERN test beam data (red) for protons (filled circles) and pions (open circles).]{Reconstructed mean $\thetaC$ with simulated background subtraction but no per-MCP-PMT correction from GEANT4 simulation (blue) and study 151 of the 2015 CERN test beam data (red) for protons (filled circles) and pions (open circles). The solid and dashed lines indicate the true Cherenkov angle for 7 GeV/c pions and protons respectively.}
 	\label{fig:2015_THC_bg_nocorr}
 \end{figure}
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{2015_THC_mcpcorr.pdf}
-	\caption{Reconstructed mean $\thetaC$ with no background subtraction but using a per-MCP-PMT correction from GEANT4 simulation (blue) and study 151 of the 2015 CERN test beam data (red) for protons (filled circles) and pions (open circles). The solid and dashed lines indicate the true Cherenkov angle for 7 GeV/c pions and protons respectively.}
+	\caption[Reconstructed mean $\thetaC$ with no background subtraction but using a per-MCP-PMT correction from GEANT4 simulation (blue) and study 151 of the 2015 CERN test beam data (red) for protons (filled circles) and pions (open circles).]{Reconstructed mean $\thetaC$ with no background subtraction but using a per-MCP-PMT correction from GEANT4 simulation (blue) and study 151 of the 2015 CERN test beam data (red) for protons (filled circles) and pions (open circles). The solid and dashed lines indicate the true Cherenkov angle for 7 GeV/c pions and protons respectively.}
 	\label{fig:2015_THC_mcpcorr}
 \end{figure}
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{2015_THC_bg_mcpcorr.pdf}
-	\caption{Reconstructed mean $\thetaC$ with simulated background subtraction and using a per-MCP-PMT correction from GEANT4 simulation (blue) and study 151 of the 2015 CERN test beam data (red) for protons (filled circles) and pions (open circles). The solid and dashed lines indicate the true Cherenkov angle for 7 GeV/c pions and protons respectively.}
+	\caption[Reconstructed mean $\thetaC$ with simulated background subtraction and using a per-MCP-PMT correction from GEANT4 simulation (blue) and study 151 of the 2015 CERN test beam data (red) for protons (filled circles) and pions (open circles).]{Reconstructed mean $\thetaC$ with simulated background subtraction and using a per-MCP-PMT correction from GEANT4 simulation (blue) and study 151 of the 2015 CERN test beam data (red) for protons (filled circles) and pions (open circles). The solid and dashed lines indicate the true Cherenkov angle for 7 GeV/c pions and protons respectively.}
 	\label{fig:2015_THC_bg_mcpcorr}
 \end{figure}
 
@@ -367,7 +367,7 @@ The time-based reconstruction of the 2015 CERN data was done in the same manner 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{2015_timebased_example.pdf}
-	\caption{Log-likelihood separation for $90^\circ$ (left) and $25^\circ$ (right) polar angles for pions (blue) and protons (red). Particles identified as protons will tend towards the right side of the zero point, while particles identified as pions will tend towards the left side of the zero point. The calculated separation power for each distribution are 1.48 and 3.5 standard deviations (std dev) respectively.  The overlap of one curve under another will give the misidentification (MisID) of that species as being identified as the other.}
+	\caption[Log-likelihood separation for $90^\circ$ (left) and $25^\circ$ (right) polar angles for pions (blue) and protons (red).]{Log-likelihood separation for $90^\circ$ (left) and $25^\circ$ (right) polar angles for pions (blue) and protons (red). Particles identified as protons will tend towards the right side of the zero point, while particles identified as pions will tend towards the left side of the zero point. The calculated separation power for each distribution are 1.48 and 3.5 standard deviations (std dev) respectively.  The overlap of one curve under another will give the misidentification (MisID) of that species as being identified as the other.}
 	\label{fig:2015_timebased_example}
 \end{figure}
 
@@ -384,7 +384,7 @@ Figure \ref{fig:2015_timebased_separation} shows the separation power for the ra
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=\textwidth]{2015_timebased_efficiency.pdf}
-	\caption{PID (closed circles) and MisID (open circles) probabilities for simulated protons (blue) and tagged proton events in beam data (red). Results for pions are similar for both simulation and beam data.}
+	\caption[PID (closed circles) and MisID (open circles) probabilities for simulated protons (blue) and tagged proton events in beam data (red).]{PID (closed circles) and MisID (open circles) probabilities for simulated protons (blue) and tagged proton events in beam data (red). Results for pions are similar for both simulation and beam data.}
 	\label{fig:2015_timebased_efficiency}
 \end{figure}
 Figure \ref{fig:2015_timebased_efficiency} shows the PID and MisID probability for protons as a function of polar angle Results for pion PID and MisID probability are similar to that of the proton. Again, due to the worse timing resolution than expected, the MisID is much worse for the beam data than the simulation.
