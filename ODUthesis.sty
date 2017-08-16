@@ -46,8 +46,6 @@
 \renewcommand\@dotsep{2.}
 
 
-
-
 \def\@xfloat#1[#2]{\ifhmode \@bsphack\@floatpenalty -\@Mii\else
    \@floatpenalty-\@Miii\fi\def\@captype{#1}\ifinner
       \@parmoderr\@floatpenalty\z@
@@ -238,7 +236,6 @@
                 \let\addvspace=\saveaddvspace}
                 \cleardoublepage
         \fi
-        
         \iffigurespage
                 {\addcontentsline{toc}{chapter}{\uppercase{List of Figures}}
                  \addvspace{10pt}
@@ -248,16 +245,12 @@
                  \let\addvspace=\saveaddvspace
 
                 \let\addvspace=\saveaddvspace}
-                
-                	\cleardoublepage
-                
+                \cleardoublepage
         \fi
-        
         \def\baselinestretch{1.3}\@normalsize
         \pagenumbering{arabic}
         \pagestyle{myheadings}
-        	\labelchaptersintableofcontents
-        	}
+        \labelchaptersintableofcontents}
 
 \def\tableofcontents{\pagestyle{myheadings}\chapter*{Table of Contents}
  \@starttoc{toc}
@@ -265,6 +258,9 @@
 
 \def\listoffigures{\chapter*{List of Figures}
  %\newline
+ \makeatletter
+     \renewcommand*\l@figure{\@dottedtocline{1}{1em}{3.2em}}
+\makeatother
  {\setlength{\parskip}{12\p@} \@starttoc{lof}}
  \addtocontents{lof}{\noindent Figure\hfill Page\par}}
 

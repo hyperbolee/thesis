@@ -2,12 +2,7 @@
 
 \documentclass[12pt]{report}
 
-%This package is built on the LaTeX2e report class, so any other packages which are
-%also compatible with it can also be used in combination with it.  ODUthesis should
-%be in the directory in which you are working, or in one of the standard input directories
-%for the TeX installation on your system.
-
-\usepackage{ODUthesis}
+% useful packages
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{multirow}
@@ -21,25 +16,28 @@
 
 %Use this package to label figures and tables similarly to equations above
 
-%\usepackage[figurewithin=chapter]{caption}
-%\usepackage[tablewithin=chapter]{caption}
+\usepackage[figurewithin=chapter]{caption}
+\usepackage[tablewithin=chapter]{caption}
 
 % Use this package to include URLs
 \usepackage{url}
 %\usepackage{hyperref}
 
-%This allows the use of scalable vector graphics (svg)
-%Must use \includesvg{} 
-%\usepackage{svg}
-
-%This package causes the first line of a section to be indented as required by the dissertation guide.
-
-\usepackage{indentfirst}
-
 % Supresses citations in TOC so that numbering is correct in document
 \usepackage{notoccite}
 
 %%%%%Other LaTeX2e packages such as the AMS fonts and graphics packages can be included here.
+
+%This package is built on the LaTeX2e report class, so any other packages which are
+%also compatible with it can also be used in combination with it.  ODUthesis should
+%be in the directory in which you are working, or in one of the standard input directories
+%for the TeX installation on your system.
+
+\usepackage{ODUthesis}
+
+%This package causes the first line of a section to be indented as required by the dissertation guide.
+
+\usepackage{indentfirst}
 
 %This style follows conventions used in Physical Review C. The names of figures, tables and captions can
 %be changed by using the commands below with appropriate changes. For example, "FIG." could be replaced by
@@ -61,17 +59,17 @@
 % Define paths to figures and plots
 \graphicspath{{./figures/}{./plots/}{./plots/thetaC/}}
 
-% Set of commands to allow commenting in bold red
-% and listing all comments with page number
-% before introductory chapter
-\usepackage{tocloft}
-\newcommand{\listcomments}{Comments}
-\newlistof{comments}{comm}{\listcomments}
-\newcommand{\comment}[1]{%
-	\refstepcounter{comments}%
-	\textbf{\large \pdfliteral{1 0 0 rg} #1 \pdfliteral{0 0 0 rg}}%
-	\addcontentsline{comm}{comments}{{\large \pdfliteral{1 0 0 rg} #1 \pdfliteral{0 0 0 rg}}}
-} % add big colored comment to text so it's easily identified later
+%% Set of commands to allow commenting in bold red
+%% and listing all comments with page number
+%% before introductory chapter
+%\usepackage{tocloft}
+%\newcommand{\listcomments}{Comments}
+%\newlistof{comments}{comm}{\listcomments}
+%\newcommand{\comment}[1]{%
+%	\refstepcounter{comments}%
+%	\textbf{\large \pdfliteral{1 0 0 rg} #1 \pdfliteral{0 0 0 rg}}%
+%	\addcontentsline{comm}{comments}{{\large \pdfliteral{1 0 0 rg} #1 \pdfliteral{0 0 0 rg}}}
+%} % add big colored comment to text so it's easily identified later
 
 \begin{document}
 
@@ -86,13 +84,12 @@
 \member{Mike Overstreet}  %title page. Use on instance of this command for each member of the
                    %committee other than the advisor up to a total of 5 members.
 
-\degrees{B.S. in Mathematics, University of North Georgia, May 2012 \\
-B.S. in Physics, University of North Georgia, May 2012 \\
-M.S. in Physics, Old Dominion University, May 2014}
-
+\degrees{B.S. May 2012, University of North Georgia \\
+B.S. May 2012, University of North Georgia \\
+M.S. May 2014, Old Dominion University}
 \dept{Physics}          %for example \dept{physics}
 
-\submitdate{July 2017}
+\submitdate{August 2017}
 
 %\phdfalse          %produces language on title page for Masters Thesis. 
                     %otherwise the default is for a Ph.D. dissertation.
@@ -150,7 +147,7 @@ Radiation hardness of the lanthanum crown glass was tested using a 160~keV X-ray
 \prefacesection{Acknowledgements}
     %text of Acknowledgements goes here, any other preface section is inserted similarly by the command \prefacesection{Section Title}
 
-I would like to thank 
+This manuscript is dedicated to my parents, Jennifer and Stacy Allison. Without their love and support I would not be where I am today.
 
 \afterpreface
 
